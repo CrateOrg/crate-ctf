@@ -1,0 +1,8 @@
+version: '2'
+services:
+  xtnlkrypto:
+    build:
+      context: .
+    ports:
+      - "11111:31337"
+    restart: always

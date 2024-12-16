@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - 12321:3000
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      FLAG: ${FLAG}
+    volumes:
+      - ./data:/data
+  redis:
+    image: redis:7.0-alpine3.18

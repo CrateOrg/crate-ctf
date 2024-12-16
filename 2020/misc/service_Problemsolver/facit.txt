@@ -1,0 +1,30 @@
+Flaggan är: Nature never uses prime numbers. But mathematicians do.
+
+Tjänsten vill ha svar på matteuppgifter av varierad komplexitet, uppgifterna kommer en i taget efter att man skickat "READY" till tjänsten.
+Man har 10 sekunder på sig att svara, förutom för de sista 6 uppgifterna som kräver svar inom 2 sekunder, vilket gör att någon form av scriptning är så gott som nödvändigt.
+
+En lösning är med python och pwntools:
+###################
+import pwn
+
+p = pwn.remote("127.0.0.1", 53111)
+p.sendline("READY")
+
+while True:
+    line = p.recvuntil("\n").strip().decode("ascii").strip()
+    print(line)
+    if line[0] != "#":
+        p.sendline( str(eval(line)) )
+###################
+
+En annan oneliner med bash, som kommer att spotta ur sig flaggan.
+mkfifo fifo && echo "READY" > readyfile && bc -q < fifo | cat readyfile - | nc localhost 53111 | tee fifo
+
+Detaljerad förklaring:
+1. mkfifo fifo                     # skapar en "FIFO fil" som heter fifo (kommandot "mknod fifo p" gör samma sak)
+2. echo "READY" > readyfile        # preppar en fil "readyfile" som innehåller "READY", vilket behöver skickas för att uppgifterna ska börja komma
+3. bc -q < fifo                    # kör bc i quiet-mode och redirecta innehållet från fifo till stdin. stdout pipas till steg 4
+4. cat readyfile -                 # skriv ut innehållet i readyfile och fortsätt med stdin, vilket kommer från bc i steg 3
+5. nc localhost 53111 | tee fifo   # connecta till tjänsten, stdin kommer från cat (dvs READY följt av bc's stdout), stdout dupliceras till fifo, dvs upggifterna matas tillbaka till bc i steg 3
+
+

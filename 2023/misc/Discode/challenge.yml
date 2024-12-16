@@ -1,0 +1,22 @@
+version: "0.1" # ctfdcli version used
+
+name: Discode
+author: martin
+category: Övriga
+description: |
+  Den discoälskande Alice blinkar kod till vännen Bob
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{lightemittingdiodesrule}
+
+files:
+  - filer.zip
+
+state: visible

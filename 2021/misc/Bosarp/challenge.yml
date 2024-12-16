@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Bösarp
+author: larshson
+category: Övriga
+description: |
+  Franz reste iväg för att söka efter högre makter och kom aldrig hem igen. Nio år senare mailade han en fil.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{vi_vill_alla_vandra_till_cirkeln_i_bosarp}
+
+
+files:
+  - track.gpx
+
+state: visible

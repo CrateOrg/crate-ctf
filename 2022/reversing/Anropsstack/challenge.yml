@@ -1,0 +1,26 @@
+version: "0.1" # ctfdcli version used
+
+name: Så går vi ner i vår anropsstack
+author: Johan
+category: Reversering
+description: |
+  Vi gjorde ett verktyg för att kontrollera så att flaggan ser ut som den ska, men efter en hårddiskkrasch så har själva flaggan gått förlorad.
+  Men vi har en kraschdump från en tidigare körning av programmet, går det att få ut flaggan från den?
+
+  Tips: i GDB kan kommandot `set sysroot <path>` användas för att ladda in bibliotek (.so-filer) från en specifik mapp.
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{recursive_descent_whooo}
+
+files:
+  - check_flag_format
+  - check_flag_format.core.xz
+  - libs.tar.xz
+
+state: visible

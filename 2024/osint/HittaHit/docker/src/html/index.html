@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HittaHit</title>
+    <style>
+        html {
+	    height: 100%;
+        }
+	body {
+	    height: 100%;
+	    margin: 0;
+	    font-family: Arial, sans-serif;
+	    background: linear-gradient(to bottom right, #FFD1DC, #D1FFDA); /* Light pink to light green gradient */
+            background-attachment: fixed;
+	}
+	#logo {
+	    display: block;
+	    width: 280px;   /* Original width of the logo */
+	    height: 280px;  /* Original height of the logo */
+	}
+	.container {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    height: 100%;
+	}
+	
+	#panes {
+	    display: flex;
+	    align-items: center;
+	}
+	#inputPane, #outputPane {
+	    background-color: #f0f0f0;
+	    width: 100%;  /* Decreased initial width */
+	    border: 1px solid #ddd;
+	    padding: 10px;
+	    position: relative;
+	    text-align: center;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetic */
+	    transition: all 0.3s ease;  /* Transition effect for smoother resizing */
+	}
+	#inputPane.expanded, #outputPane.expanded {
+	    width: 100%;  /* Width after expansion */
+	    height: 900px; /* Height after expansion */
+	}
+        #settingsPane {
+            padding: 20px
+        },
+        #shredButton {
+            margin: 0 2%;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+	    display: none;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        label {
+            cursor: pointer;
+        }
+        .drag-over {
+            background-color: #36f8fa;
+            border-color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+  <div class="container"> 
+    <img src="compass-8277241_1280.png" alt="Logo" id="logo">
+    <H1>HittaHit</H1>
+    <div id="panes">
+	<img id="outputPane" src="Road_sign.jpeg" alt="Scissor01">
+    </div>
+    <div id="settingsPane">
+      <H3>HittaHit 1: Fotografens position</H3>
+      Mata in fotografens position för att få flaggan.
+      <form action="cpos.php" method="post">
+        <label id="pos" >Position:</label>
+        <input type="text" name="pos" id="pos" required />
+      </form>
+      <H3>HittaHit 2: Förra ägaren</H3>
+      <p>Uppgift 2 är att skicka in ytterligare en flagga på samma format som övriga, dvs <i>cratectf{Text}</i> där <i>Text</i> är utbytt mot bilfirman som förknippas med förra husägaren i korsningen.</p>
+    </div>
+  </div>
+</body>
+</html>

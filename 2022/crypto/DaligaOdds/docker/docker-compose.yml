@@ -1,0 +1,8 @@
+version: '3'
+services:
+  daliga_odds:
+    build:
+      context: .
+    ports:
+      - "16484:31337"
+    restart: always

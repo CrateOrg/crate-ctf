@@ -1,0 +1,28 @@
+version: "0.1" # ctfdcli version used
+
+name: Encro4
+author: jerry
+category: Krypto
+description: |
+  Hackarna verkar använda en kryptotjänst för att kommunicera med varanda.
+  Vi har lyckats hitta följande på en Zip-drive:
+  ZDE1N2Y2ZDMwMmRlMTBkOGUxNjM0ZmVhOWRi
+  YWZlMDg5MTNkZWE2NzQxNTExZDEwNzI1Y2Ux
+  ZmNkMTE5ZGJiNDA0MDgwNmM0MGU3YWJhMGMz
+  MGQ2M2NmYjU3MDllMGVkOWZlOAo=
+ 
+connection_info: nc challs.crate.nu 31338
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+tags:
+  - uppvärmning
+
+flags:
+  - cratectf{samma_nyckel_utan_nonce_kan_vara_farligt}
+
+state: visible

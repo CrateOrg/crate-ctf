@@ -1,0 +1,13 @@
+services:
+  fillagring:
+    build: .
+    environment:
+      - SECRET=SDA5QAypLvia0eLZ3hpOKvgAlZ13LZI0
+    ports: [ 2580:2580 ]
+    read_only: true # The vulnerability allows users to upload files wherever (without this)
+    restart: always
+    volumes:
+      - uploaded:/app/uploaded
+
+volumes:
+  uploaded:

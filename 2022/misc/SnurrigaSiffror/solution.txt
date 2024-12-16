@@ -1,0 +1,5 @@
+1. Gör om ljuden till siffror på något sätt. Manuellt arbete kan löna sig trots allt. Längden
+på varje ljud är stigande (se fingerskiva_mp3.txt), d v s noll är kortast och nio är längst.
+2. Gruppera siffrorna i tresiffriga tal, motsvarande int av Unicode (ASCII i det här fallet)
+3. Omvandla de tresiffriga talen till motsvarande tecken.
+4. Strängen är flaggan.

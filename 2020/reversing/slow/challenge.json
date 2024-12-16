@@ -1,0 +1,9 @@
+{
+	"name": "Slö",
+	"description": "Programmet kommer skriva ut en flagga efter en stund, ge det lite tid bara",
+	"categories": ["Reversing"],
+	"default_flag": "2020ctf{3340200223}",
+	"variable_flag": false,
+	"static": true,
+	"authors": ["toblund"]
+}

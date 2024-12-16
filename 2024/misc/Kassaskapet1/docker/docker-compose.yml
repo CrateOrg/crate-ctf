@@ -1,0 +1,8 @@
+services:
+  kassaskap:
+    build: .
+    ports:
+      - "50004:50004"
+      - "50005:8545"
+    restart: always
+    init: true

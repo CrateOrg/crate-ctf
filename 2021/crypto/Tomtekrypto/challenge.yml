@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Tomtekrypto
+author: toblu
+category: Kryptografi
+description: Jag ville bara läsa lite litteratur, men texten har blivit alldels konstig. Kan du hjälpa mig att tyda den?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{Se,_där_är_ju_en_till!}
+
+files:
+  - krypterad.txt
+
+state: visible
+
+

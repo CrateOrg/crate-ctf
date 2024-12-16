@@ -1,0 +1,9 @@
+{
+	"name": "SlumpXor",
+	"description": "Vår slumpbitsgenerator är lite skev, men vad gör det?",
+	"categories": ["Crypto"],
+	"default_flag": "2020ctf{svag_slump_som_skydd_slutar_som_synd}",
+	"variable_flag": true,
+	"static": false,
+	"authors": ["toblund"]
+}

@@ -1,0 +1,11 @@
+version: '2'
+services:
+  unicorn_shredder:
+    build:
+      context: .
+    container_name: unicorn_shredder
+    ports:
+      - "41141:80"
+    restart: always
+    # volumes:
+      # - ./src:/var/www

@@ -1,0 +1,8 @@
+version: '2'
+services:
+  takeover:
+    build:
+      context: .
+    ports:
+      - "15833:8080"
+    restart: always

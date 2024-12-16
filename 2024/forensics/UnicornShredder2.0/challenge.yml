@@ -1,0 +1,21 @@
+version: "3" # ctfdcli version used
+
+name: Unicorn Shredder 2.0
+author: Lars
+category: Forensik
+description: |
+  Företaget som låg bakom den första versionen av Unicorn Shredder tog till sig kritiken från vårt förra test då det visade sig att det var trivialt att klippa små fyrkanter och lägga pussel. Den här gången strimlas bilderna _på riktigt_.
+  Vi fick en trial-version även på denna versionen.
+
+connection_info: http://challs.crate.nu:41141
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{i_really_hope_the_scissor_method_wont_work_this_time}
+
+state: hidden

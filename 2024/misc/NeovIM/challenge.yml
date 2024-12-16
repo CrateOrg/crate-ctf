@@ -1,0 +1,22 @@
+version: "3" # ctfdcli version used
+
+name: NeovIM
+author: Caspian
+category: Övriga
+description: |
+  Du hade begett dig in i skogen NeoVim för att söka efter skatter och guld, men nu stod du i mitten av skogen borttappad.
+  I din ögonvrå skymtar du ett värdhus. Inne i värdhuset skådar du en mörk figur som sitter vid disken. Du närmar dig och frågar om han kan hjälpa dig hitta ut.
+  Medan han plockar fram en tändsticksask yttrar han sig: "Jag kan hjälpa dig hitta ut ur NeoVim, men först måste du spela..."
+
+connection_info: nc challs.crate.nu 50002
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{Write_:wq_to_exit_neovim}
+
+state: visible

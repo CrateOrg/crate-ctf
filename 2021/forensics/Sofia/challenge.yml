@@ -1,0 +1,24 @@
+version: "0.1" # ctfdcli version used
+
+name: Sofia
+author: larshson
+category: Forensik
+description: |
+  Här är en minnesdump från Sofias maskin. Sofia gillar albatrosser, och vill ha en som husdjur.
+
+  Flaggan har dock inget med fåglar att göra, men kanske hanterar hon känsligheter någonstans?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{xp_ej_naggande_gott}
+
+files:
+  - dump.raw.xz
+
+state: visible

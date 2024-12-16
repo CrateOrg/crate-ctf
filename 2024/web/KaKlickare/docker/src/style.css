@@ -1,0 +1,62 @@
+/*chatgpt tar design jobbet */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #4d4d4d;
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+div {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease;
+}
+
+img:active {
+    transform: scale(0.95);
+}
+
+p {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+}
+
+#nClicks {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff8c00;
+}
+
+#flagStatus {
+    font-size: 18px;
+    color: #2e8b57;
+}
+
+div[onclick="getFlag()"] {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+div[onclick="getFlag()"]:hover {
+    background-color: #ff4500;
+}

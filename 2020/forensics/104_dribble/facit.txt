@@ -1,0 +1,31 @@
+Utmaningen bygger på en pcap-fil som genererats i RICS-el. I filen används IEC 60870-5-104 för att sända ett dolt meddelande genom att slå av och på en brytare var tionde sekund. Varannan minut sänds ett tecken i form av ett 8-bitars ASCII-värde. Tecknena utgör tillsammans flaggan.
+
+För att lösa problemet behöver deltagaren öppna pcap-filen och lokalisera sambandet. Detta görs enklast genom att applicera ett wireshark-filter för 104-trafiken (t.ex. ip.src == 192.168.197.8 && iec60870_asdu, iec60870_asdu || iec60870_104 alternativt 104apci||104asdu beroende på version). Därefter kan brytarna lokaliseras genom att titta på paketen innehållande Act. Dessa skickas i en sekvens om åtta instruktioner var tionde sekund. Genom att titta på värdet (ON eller OFF) fås binärvärdet av tecknet. 
+
+Exempel på ett paket nedan:
+
+* IEC 60870-5 ASDU	70	<- I (155,5395) ASDU=1 C_DC_NA_1 Act     IOA=21004
+* Frame 620: 70 bytes on wire (560 bits), 70 bytes captured (560 bits)
+* Ethernet II, Src: Cisco_ae:73:4f (00:00:0c:ae:73:4f), Dst: PcsCompu_ea:ec:87 (08:00:27:ea:ec:87)
+* Internet Protocol Version 4, Src: 192.168.197.8, Dst: 56.3.101.10
+* Transmission Control Protocol, Src Port: 49176, Dst Port: 2404, Seq: 213, Ack: 2345, Len: 16
+* IEC 60870-5-104: <- I (148,5339) 
+* IEC 60870-5-101/104 ASDU: ASDU=1 C_DC_NA_1 Act     IOA=21004 'double command'
+*    TypeId: C_DC_NA_1 (46)
+*    0... .... = SQ: False
+*    .000 0001 = NumIx: 1
+*    ..00 0110 = CauseTx: Act (6)
+*    .0.. .... = Negative: False
+*    0... .... = Test: False
+*    OA: 0
+*    Addr: 1
+*    IOA: 21004
+*        IOA: 21004
+*        DCO: 0x81
+*            .... ..01 = ON/OFF: OFF (1)
+*            .000 00.. = QU: No pulse defined (0)
+*            1... .... = S/E: Select
+
+# Trivia: 
+# "The first use of the term cryptograph (as opposed to cryptogram) dates back to the 19th century—originating from The Gold-Bug, a novel by Edgar Allan Poe." Från Wikipedia: https://en.wikipedia.org/wiki/The_Gold-Bug
+# - Whalen, Terence (1994). "The Code for Gold: Edgar Allan Poe and Cryptography". Representations. University of California Press (46): 35–57. doi:10.2307/2928778. JSTOR 2928778.

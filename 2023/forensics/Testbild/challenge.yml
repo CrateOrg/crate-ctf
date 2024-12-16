@@ -1,0 +1,21 @@
+version: "0.1" # ctfdcli version used
+
+name: Testbild
+author: jerry
+category: Forensik
+description: En gammal tjock-TV hade denna bild inbränd
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{kanske_trumfar_myrornas_krig}
+
+files:
+  - challenge.png
+
+state: visible

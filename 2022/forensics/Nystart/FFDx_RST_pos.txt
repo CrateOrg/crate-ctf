@@ -1,0 +1,60 @@
+===================== FFD0 ======================
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_00.jpg
+27974         0x6D46          Raw signature (\xFF\xd0)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_04.jpg
+29511         0x7347          Raw signature (\xFF\xd0)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_09.jpg
+44495         0xADCF          Raw signature (\xFF\xd0)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_15.jpg
+7557          0x1D85          Raw signature (\xFF\xd0)
+===================== FFD1 ======================
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_00.jpg
+55529         0xD8E9          Raw signature (\xFF\xd1)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_05.jpg
+1021          0x3FD           Raw signature (\xFF\xd1)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_10.jpg
+25274         0x62BA          Raw signature (\xFF\xd1)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_15.jpg
+45155         0xB063          Raw signature (\xFF\xd1)
+===================== FFD2 ======================
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_01.jpg
+18708         0x4914          Raw signature (\xFF\xd2)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_05.jpg
+41078         0xA076          Raw signature (\xFF\xd2)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_11.jpg
+5952          0x1740          Raw signature (\xFF\xd2)
+===================== FFD3 ======================
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_01.jpg
+51476         0xC914          Raw signature (\xFF\xd3)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_06.jpg
+16301         0x3FAD          Raw signature (\xFF\xd3)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_11.jpg
+53442         0xD0C2          Raw signature (\xFF\xd3)
+===================== FFD4 ======================
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_02.jpg
+17386         0x43EA          Raw signature (\xFF\xd4)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_06.jpg
+59315         0xE7B3          Raw signature (\xFF\xd4)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_12.jpg
+35136         0x8940          Raw signature (\xFF\xd4)
+===================== FFD5 ======================
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_02.jpg
+51028         0xC754          Raw signature (\xFF\xd5)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_07.jpg
+35923         0x8C53          Raw signature (\xFF\xd5)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_13.jpg
+14745         0x3999          Raw signature (\xFF\xd5)
+===================== FFD6 ======================
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_03.jpg
+20756         0x5114          Raw signature (\xFF\xd6)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_08.jpg
+13869         0x362D          Raw signature (\xFF\xd6)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_13.jpg
+59595         0xE8CB          Raw signature (\xFF\xd6)
+===================== FFD7 ======================
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_03.jpg
+58431         0xE43F          Raw signature (\xFF\xd7)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_08.jpg
+63570         0xF852          Raw signature (\xFF\xd7)
+Target File:   /home/marka/Dokument/code/python/crate-ctf-2022/challenges/Nystart/Nystart_14.jpg
+34437         0x8685          Raw signature (\xFF\xd7)

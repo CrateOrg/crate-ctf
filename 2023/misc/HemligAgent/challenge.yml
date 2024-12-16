@@ -1,0 +1,22 @@
+version: "0.1" # ctfdcli version used
+
+name: Hemlig agent
+author: Johan
+category: Övriga
+description: |
+  Statens Speciellt Hemliga Agenter lyssnar överallt...
+
+  Flaggan finns i `/home/flagholder/flag.txt`.
+
+connection_info: http://challs.crate.nu:1337/wetty?image=ctf/hemligagent
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{hoppsan_det_blev_visst_en_dubbelagent}
+
+state: visible

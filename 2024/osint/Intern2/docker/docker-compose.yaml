@@ -1,0 +1,25 @@
+services:
+  traefik:
+    image: traefik:v3.1
+    ports: [ "80:80", "443:443" ]
+    restart: always
+    command:
+      - "--configFile=/traefik-static.yaml"
+    volumes:
+      - ./traefik-static.yaml:/traefik-static.yaml:ro
+      - ./traefik-dynamic.yaml:/traefik-dynamic.yaml:ro
+      - acme-certs:/acme
+  website:
+    build: https://github.com/ossianwallengren/ossianwallengren.se.git
+    restart: always
+    environment:
+      - PORT=3000
+  ssh:
+    build: ./ssh
+    restart: always
+    ports: [ 22:22 ]
+    hostname: ossianwallengren.se
+    read_only: true
+
+volumes:
+  acme-certs:

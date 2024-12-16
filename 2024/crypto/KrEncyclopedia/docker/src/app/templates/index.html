@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrEncyclopedia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1 id="main-header">{{ header }}</h1>
+    </header>
+    <section id="content-section">
+        <img src="{{ url_for('static', filename='globe.webp') }}" alt="Globe Image" class="img"/>
+        <div id="article-content">
+            <p>{{ content }}</p>
+        </div>
+    </section>
+    <nav id="navigation">
+        <p><a href="{{ url_for('index') }}" class="nav-link">Index</a></p>
+        <p><a href="{{ url_for('wiki') }}" class="nav-link">Free Wikipedia Article of the Request!</a></p>
+        <p><a href="{{ url_for('flag') }}" class="nav-link">Free Flag of the Day!</a></p>
+    </nav>
+</body>
+</html>

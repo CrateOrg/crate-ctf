@@ -1,0 +1,27 @@
+version: "3" # ctfdcli version used
+
+name: Robotfilter
+author: Mathias
+category: Webb
+description: |
+  🫵 = 🤖
+
+  🛑🤖
+
+  😥
+
+connection_info: https://robotfilter.challs.crate.nu/
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{🤖😠🤖😠🤖}
+
+tags:
+  - uppvärmning
+
+state: visible

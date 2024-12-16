@@ -1,0 +1,20 @@
+version: "3" # ctfdcli version used
+
+name: Buggigt
+author: Johan
+category: Övriga
+description: |
+  Det är något fel på mitt program, kan du hjälpa till att debugga det?
+
+connection_info: http://challs.crate.nu:1337/wetty?image=ctf/buggigt
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{riktigt_bra_avlusat}
+
+state: visible

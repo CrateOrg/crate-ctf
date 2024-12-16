@@ -1,0 +1,9 @@
+{
+	"name": "Lager av zippar",
+	"description": "En lösenordsskyddad .zip. Lösenordet är den fyrasiffriga kod som utgör filnamnet på nästa zipfil.",
+	"categories": ["General"],
+	"default_flag": "testctf{hurra_massor_av_zipfiler}",
+	"variable_flag": true,
+	"static": true,
+	"authors": ["toblund"]
+}

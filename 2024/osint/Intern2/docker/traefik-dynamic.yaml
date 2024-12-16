@@ -1,0 +1,12 @@
+http:
+  services:
+    website:
+      loadBalancer:
+        servers:
+          - url: "http://website:3000"
+  routers:
+    website:
+      rule: "Host(`ossianwallengren.se`)"
+      service: website
+      # tls:
+      #   certresolver: default

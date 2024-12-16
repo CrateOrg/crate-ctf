@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Packed Files</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="main-container">
+        <h1 id="title">Your Packed Files</h1>
+        <div id="image-container">
+            <img src="{{ url_for('static', filename='pacman.webp') }}" alt="Packman" id="packman-image"/>
+        </div>
+        <div id="file-list">
+            {% for i in range(0, len) %} 
+                <p><a href="{{ url_for('download', filename=files[i])}}" class="file-link">{{files[i]}}</a></p> 
+            {% endfor %} 
+        </div>
+        <div id="links">
+            <p><a href="{{ url_for('index') }}" class="link-button">Pack a file</a></p>
+            <p><a href="{{ url_for('unpack') }}" class="link-button">Unpack a file</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+version: "0.1" # ctfdcli version used
+
+name: Åttahundratvå punkt elva
+author: johahed
+category: Forensik
+description: |
+  Någon försökte sälja mig en trådlös flagga för det priset.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{kanske_hade_wep_varit_ett_alternativ}
+
+files:
+  - chall.pcapng.xz
+
+state: visible

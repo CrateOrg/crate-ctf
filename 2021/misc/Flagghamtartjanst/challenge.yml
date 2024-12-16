@@ -1,0 +1,21 @@
+version: "0.1" # ctfdcli version used
+
+name: Flagghämtartjänst
+author: toblu
+category: Övriga
+description: Någon Apache-grej kör på `challenges.ctf.crate.foi.se` port 13313, kan du komma på vad det är?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{thriiiiiiift}
+
+files:
+    - docker/description
+
+state: visible

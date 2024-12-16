@@ -1,0 +1,6 @@
+Hej, vi försökte att ta oss in i flagholders konto. Det verkar som att våra IT-administratörer prövar nya autentiseringsmetoder?
+De tog till och med bort alla tidigare hashar i /etc/shadow!
+...
+ctf:!:19935::::::
+flagholder:!:19935::::::
+...

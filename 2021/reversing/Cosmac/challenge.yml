@@ -1,0 +1,22 @@
+version: "0.1" # ctfdcli version used
+
+name: COSMAC-spel?
+author: jerry
+category: Reversering
+description: Jag hittade detta på min gamla COSMAC VIP - kan du knäcka koden?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{ch1p8_h4ck3d}
+
+files:
+  - protected.ch8
+
+state: visible
+

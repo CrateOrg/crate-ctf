@@ -1,0 +1,21 @@
+version: "0.1" # ctfdcli version used
+
+name: Rörigt
+author: Johan
+category: Övriga
+description: |
+  Kör kommandot för att få flaggan.
+
+  `curl http://challs.crate.nu:38994/ctf.sh -so - | bash`
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{curl_to_bash_everything_might_crash}
+
+state: visible

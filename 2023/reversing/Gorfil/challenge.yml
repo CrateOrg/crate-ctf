@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: (G)örfil
+author: Mathias
+category: Reversering
+description: |
+  Make är ett väldigt enkelt byggsystem och den här makefilen är skriven med läsbarhet som absolut
+  högsta prioritet.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{checktheflag}
+
+files:
+  - Makefile
+
+state: visible

@@ -1,0 +1,24 @@
+version: "0.1" # ctfdcli version used
+
+name: RetroReversering
+author: jerry
+category: Reversering
+description: |
+  Ett invitro för en CTF?!
+  Kan du knäcka knapp-kombinationen och få ut flaggan?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{gb_4ever}
+  - CRATECTF{GB_4EVER}
+
+files:
+  - intro.gb
+
+state: visible

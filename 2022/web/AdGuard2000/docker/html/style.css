@@ -1,0 +1,49 @@
+@charset "utf-8";
+body {
+	background-image: url(bckg_body.jpg);
+	background-repeat: repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+a.Menu:link {
+  color: #000000;
+  text-decoration:none;
+}
+a.Menu:visited {
+  color: #000;
+  text-decoration:none;
+}
+a.Menu:hover {
+  color: orange;
+  /* text-decoration:underline; */
+}
+a.Menu:active {
+  color: orange;
+  /* text-decoration:underline; */
+}
+a:link {
+  text-decoration:none;
+}
+a:visited {
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:underline;
+}
+a:active {
+  text-decoration:underline;
+}
+.Header {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: bolder;
+	text-transform: none;
+	font-variant: normal;
+	color: #FFF;
+	background-color: #324562;
+}
+.Menu {
+	color: #000;
+  background-color: #ffffff;
+}

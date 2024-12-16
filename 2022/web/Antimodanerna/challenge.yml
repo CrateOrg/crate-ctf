@@ -1,0 +1,25 @@
+version: "0.1" # ctfdcli version used
+
+name: Antimodänerna
+author: larshson
+category: Webb
+description: |
+  Hackergruppen "Antimodänerna" har förberett sig för sin stora övertagningsoperation.
+  Vilka organisationer de har riktat in sig på är ännu oklart. Kanske finns det ledtrådar
+  på deras server vi identifierat?
+  
+connection_info: http://challs.crate.nu:15833
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+tags:
+  - uppvärmning
+
+flags:
+  - cratectf{win_with_vhosts_understanding}
+
+state: visible

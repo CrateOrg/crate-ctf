@@ -1,0 +1,28 @@
+version: "0.1" # ctfdcli version used
+
+name: PassarBast
+author: martin
+category: Forensik
+description: |
+  Vi har fått tag på följande dump av oallokerat utrymme från en NTFS-formaterad Windowshårddisk. Sannolikt innehåller den en fragmenterad fil med ett slumpmässigt, men skrivbart, lösenord. Varje fragment verkar endast innehålla ett tecken som repeteras genom hela fragmentet, troligen för att skydda mot diskkorruption.
+
+  Kan du pussla ihop fragmenten i ordningen som "passar bäst" och ta reda på lösenordet? Flaggan fås sedan genom att sätta in lösenordet i cratectf{}, t.ex. cratectf{nfa4NBgj9a}.
+
+  Observera att du endast kan försöka skicka in flaggan 50 gånger, efter det kommer uppgiften permanent att låsas för dig.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{ytg7JIwP!>m}
+
+attempts: 50
+
+files:
+  - PB.img
+
+state: visible

@@ -1,0 +1,9 @@
+{
+	"name": "Rot13",
+	"description": "I Sverige fungerar rot13 lite annorlunda",
+	"categories": ["Crypto"],
+	"default_flag": "ETABLISSEMANG",
+	"variable_flag": true,
+	"static": true,
+	"authors": ["toblund"]
+}

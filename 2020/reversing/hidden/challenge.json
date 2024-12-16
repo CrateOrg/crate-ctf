@@ -1,0 +1,9 @@
+{
+	"name": "Flagkontrollerare",
+	"description": "Bifogar ett program som kollar om du har rätt flagga till uppgiften.",
+	"categories": ["Reversing"],
+	"default_flag": "testctf{strings_mot_en_fil_bara}",
+	"variable_flag": true,
+	"static": true,
+	"authors": ["toblund"]
+}

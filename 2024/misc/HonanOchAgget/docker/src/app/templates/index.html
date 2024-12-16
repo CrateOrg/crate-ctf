@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload new File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="container">
+        <h1>Compiler Service 3000</h1>
+        <img src="{{ url_for('static', filename='compiler_image.webp') }}" alt="Compiler Image" id="compiler-image">
+        <p>Upload your source files below, and we will compile them for you!</p>
+        <form method="post" enctype="multipart/form-data" id="upload-form">
+            <input type="file" name="file" id="file-input">
+            <input type="submit" value="Upload" id="upload-button">
+        </form>
+        <div id="links">
+            <p><a href="{{ url_for('activity') }}">Compiler activity log</a></p>
+            <p><a href="{{ url_for('listing') }}">Your compiled files</a></p>
+        </div>
+    </div>
+</body>
+</html>

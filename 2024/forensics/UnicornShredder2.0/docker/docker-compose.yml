@@ -1,0 +1,9 @@
+version: '2'
+services:
+  unicorn_shredder2.0:
+    build:
+      context: .
+    container_name: unicorn_shredder2.0
+    ports:
+      - "41141:80"
+    restart: always

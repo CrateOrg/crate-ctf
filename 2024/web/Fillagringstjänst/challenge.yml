@@ -1,0 +1,22 @@
+version: "3" # ctfdcli version used
+
+name: Fillagringstjänst
+author: Mathias
+category: Webb
+description: |
+  Ett helt nytänkande koncept - en webbsida där man kan lagra sina filer. Det har ingen tänkt på förut!
+
+  Det kanske råkar finnas en flagga i `/flag.txt`.
+
+connection_info: http://challs.crate.nu:2580
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{mamma_sa_att_det_är_taskigt_att_hacka_och_jag_tror_att_du_nyss_gjorde_det}
+
+state: visible

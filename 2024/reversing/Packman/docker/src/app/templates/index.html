@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packman</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="main-container">
+        <h1 id="title">Packman</h1>
+        <p id="subtitle">Let Packman munch your files</p>
+        <div id="image-container">
+            <img src="{{ url_for('static', filename='pacman.webp') }}" alt="Packman" id="packman-image"/>
+        </div>
+        <form method="post" enctype="multipart/form-data" id="upload-form">
+            <input type="file" name="file" id="file-input">
+            <input type="submit" value="Upload" id="upload-button">
+        </form>
+        <div id="links">
+            <p><a href="{{ url_for('listing') }}" class="link-button">Your packed files</a></p>
+            <p><a href="{{ url_for('unpack') }}" class="link-button">Unpack a file</a></p>
+        </div>
+    </div>
+</body>
+</html>

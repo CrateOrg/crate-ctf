@@ -1,0 +1,11 @@
+version: '3'
+services:
+  problemsolver:
+    build:
+      context: .
+    working_dir: /home/ctf
+    container_name: problemsolver
+    ports:
+      - "53111:53111"
+    entrypoint: /etc/chall_init.sh
+    restart: always

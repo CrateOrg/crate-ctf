@@ -1,0 +1,7 @@
+services:
+  kaklickare:
+    build: .
+    ports:
+      - "50012:8000"
+    restart: always
+    init: true

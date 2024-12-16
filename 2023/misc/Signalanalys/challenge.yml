@@ -1,0 +1,22 @@
+version: "0.1" # ctfdcli version used
+
+name: Signalanalys
+author: martin
+category: Övriga
+description: |
+  Den transmissionsagnostiska flaggan tonar bort i fjärran ...
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{brandhinkar}
+
+files:
+  - signalanalys.wav.xz
+
+state: visible

@@ -1,0 +1,24 @@
+version: "3" # ctfdcli version used
+
+name: Kassaskåpet 1 - "Den Berömda Bosse"
+author: Caspian
+category: Övriga
+description: |
+  Ökänd pokerspelare Bosse köpte ett sprillans nytt kassaskåp för att förvara alla sina vinster.
+  Detta kassaskåp var ypperst säkert och var utformad som ett block med tunga kedjor kring sig.
+
+  (OBS! Attackera ej tjänsten nedan, utan endast kontraktet som har getts ut.
+  Brute-forcing av kontrakt-adressrymd eller kontohanteringstjänst är ej tillåtet)
+connection_info: nc challs.crate.nu 50004
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{DontStoreSecretsOnBlockchain!}
+files:
+  - Vault1.sol
+state: visible

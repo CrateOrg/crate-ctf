@@ -1,0 +1,9 @@
+{
+	"name": "Dubbelt Publikt",
+	"description": "Gjorde för få egentligen",
+	"categories": ["Crypto"],
+	"default_flag": "testctf{rsa_rs4_r5a_r54}",
+	"variable_flag": true,
+	"static": true,
+	"authors": ["toblund"]
+}

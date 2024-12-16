@@ -1,0 +1,8 @@
+version: '2'
+services:
+  modbus_master:
+    build:
+      context: .
+    ports: 
+    - "42142:5020"
+    restart: always

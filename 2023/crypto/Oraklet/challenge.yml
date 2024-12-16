@@ -1,0 +1,30 @@
+version: "0.1" # ctfdcli version used
+
+name: Oraklet
+author: Johan
+category: Krypto
+description: |
+  Lyssna på vad oraklet har att säga:
+
+  ```plain
+  BOwquzaj5VAuw+W243CFTPt+B6Lmg4y+8J0jCMw4MMk4z64Y12gIA+4fB6Tk8oBD
+  ```
+  ```plain
+  I6gFIFq515l0MgmX5fRm6YOqHj+ZwBP50sSOqxbQizjjWqTKvmdAS9jlBEUUaXnIJtOXUbqlzxFO642SxbMUrA==
+  ```
+  ```plain
+  wcF5Zvm5tksqSkjQMwqxTVpxUmLoJirj7sbivnEbbH2wawRdaiJGPESGWlF58S0JHntZqho87t9IkCbudLOV8g==
+  ```
+
+connection_info: nc challs.crate.nu 16621
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{the_world_wonders}
+
+state: visible

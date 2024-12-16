@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/startActivityMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="2dip"
+        android:gravity="right|top"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/lives_third"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_gravity="center"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/health_40"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_cards_heart"
+                android:tint="#b8e994" />
+
+            <ImageView
+                android:id="@+id/health_30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_heart_broken"
+                android:tint="#fab1a0"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/health_20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_heart_off"
+                android:tint="#e17055"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lives_second"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/health_70"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_cards_heart"
+                android:tint="#b8e994" />
+
+            <ImageView
+                android:id="@+id/health_60"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_heart_broken"
+                android:tint="#fab1a0"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/health_50"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_heart_off"
+                android:tint="#e17055"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lives_first"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/health_100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_cards_heart"
+                android:tint="#b8e994" />
+
+            <ImageView
+                android:id="@+id/health_90"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_heart_broken"
+                android:tint="#fab1a0"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/health_80"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_heart_off"
+                android:tint="#e17055"
+                android:visibility="gone" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginLeft="2dip"
+        android:layout_marginTop="20dip"
+        android:gravity="end|bottom"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/level"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_flag_checkered"
+                android:tint="@color/colorAmericanRiver"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="30dip"
+            android:layout_height="2dip"
+            android:layout_gravity="center"
+            android:padding="5dip"
+            android:background="@color/colorAmericanRiver" />
+
+        <TextView
+            android:id="@+id/textView_gameLevel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="30dip"
+            android:text="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginLeft="2dip"
+        android:layout_marginTop="20dip"
+        android:gravity="end|bottom"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_star"
+                android:tint="@color/colorBrightYarrow"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="30dip"
+            android:layout_height="2dip"
+            android:layout_gravity="center"
+            android:padding="5dip"
+            android:background="@color/colorAmericanRiver" />
+
+        <TextView
+            android:id="@+id/textView_gameScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="30dip"
+            android:text="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginLeft="2dip"
+        android:layout_marginTop="20dip"
+        android:gravity="end|bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/sound_high"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_volume_high"
+                android:tint="@color/colorAmericanRiver" />
+
+            <ImageView
+                android:id="@+id/sound_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_volume_medium"
+                android:tint="@color/colorAmericanRiver"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sound_low"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_volume_low"
+                android:tint="@color/colorAmericanRiver"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sound_off"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_volume_off"
+                android:tint="@color/colorAmericanRiver"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginLeft="2dip"
+        android:layout_marginTop="20dip"
+        android:gravity="end|bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:padding="5dip">
+
+            <Button
+                android:id="@+id/settings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:background="@drawable/ic_settings"
+                android:tint="@color/colorAmericanRiver"
+                android:visibility="visible"
+                android:onClick="goButtonClickHandler" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

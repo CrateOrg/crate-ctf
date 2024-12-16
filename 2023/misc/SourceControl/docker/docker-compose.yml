@@ -1,0 +1,8 @@
+version: '3'
+services:
+  source_control:
+    hostname: source_control
+    build:
+      context: .
+    network_mode: "host"
+    restart: always

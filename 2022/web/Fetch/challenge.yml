@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Fetch
+author: larshson
+category: Webb
+description: |
+  Be pluto hämta flaggan, som finns i /yummy/honey/flag.txt
+  
+connection_info: http://challs.crate.nu:48221
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+tags:
+  - uppvärmning
+
+flags:
+  - cratectf{I_SAID_FEEEEEEETCH}
+
+state: visible

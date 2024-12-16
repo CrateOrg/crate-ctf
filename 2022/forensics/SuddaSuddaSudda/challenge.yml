@@ -1,0 +1,27 @@
+version: "0.1" # ctfdcli version used
+
+name: Sudda, sudda, sudda
+author: Johan
+category: Forensik
+description: |
+  Ta lite pengar och köp ett bättre maskeringsverktyg.
+
+  Flaggan (exklusive `cratectf{}`) är 19 tecken lång och den dolda delen består endast av siffror samt mellanslag. (Och det går inte att handla något med kortet)
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{1337 4894 1197 4115}
+
+files:
+  - card.png
+  - card_blank.png
+  - generate.py
+  - LiberationMono-Regular.ttf
+
+state: visible

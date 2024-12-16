@@ -1,0 +1,255 @@
+#pincode {
+  background: #20201e;
+  padding: 1em;
+  margin: auto;
+  position: relative;
+  border-radius: 0.5em;
+  border: 2px solid rgba(255, 255, 255, 0);
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#flag { 
+  position:relative;
+  margin: auto;
+  color: red;
+  text-align: center;
+  font-size: 2em;
+ }
+
+#pin {
+  background: #585454;
+  width: 25em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 2em;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#pin p { font-size: .8em; }
+
+.numbers {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  margin: 2em 0;
+}
+
+.number {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0.5em;
+  border-radius: 2.5em;
+  border: 2px solid rgba(255, 255, 255, 0);
+  text-align: center;
+  line-height: 2.5em;
+  font-weight: 400;
+  font-size: 1.8em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.number:hover { color: rgba(255, 255, 255, 0.5); }
+
+.number:hover:before { 
+  border: 9px solid rgba(255, 255, 255, 0.5); 
+  border-radius: 3.5em;
+}
+
+.number:before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  width: 2.5em;
+  height: 2.5em;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2.5em;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.pincode.grow:before {
+  -webkit-animation: grow .6s ease;
+  animation: grow .6s ease;
+}
+
+.number.grow:before {
+  -webkit-animation: grow .6s ease;
+  animation: grow .6s ease;
+}
+
+@-webkit-keyframes
+growDot {  100% {
+ background: white;
+ -webkit-transform: scale3d(0.9, 0.9, 0.9);
+ transform: scale3d(0.9, 0.9, 0.9);
+}
+}
+
+@keyframes
+growDot {  100% {
+ background: white;
+ -webkit-transform: scale3d(0.9, 0.9, 0.9);
+ transform: scale3d(0.9, 0.9, 0.9);
+}
+}
+
+@-webkit-keyframes
+grow {  50% {
+ -webkit-transform: scale3d(1.5, 1.5, 1.5);
+ transform: scale3d(1.5, 1.5, 1.5);
+}
+ 100% {
+ -webkit-transform: scale3d(1, 1, 1);
+ transform: scale3d(1, 1, 1);
+}
+}
+
+@keyframes
+grow {  50% {
+ -webkit-transform: scale3d(1.5, 1.5, 1.5);
+ transform: scale3d(1.5, 1.5, 1.5);
+}
+ 100% {
+ -webkit-transform: scale3d(1, 1, 1);
+ transform: scale3d(1, 1, 1);
+}
+}
+
+@-webkit-keyframes
+wrong {  20% {
+ background: crimson;
+}
+ 40% {
+ -webkit-transform: translate(-15px, 0);
+ transform: translate(-15px, 0);
+}
+ 60% {
+ -webkit-transform: translate(10px, 0);
+ transform: translate(10px, 0);
+}
+ 80% {
+ -webkit-transform: translate(-5px, 0);
+ transform: translate(-5px, 0);
+}
+}
+
+@keyframes
+wrong {  20% {
+ background: crimson;
+}
+ 40% {
+ -webkit-transform: translate(-15px, 0);
+ transform: translate(-15px, 0);
+}
+ 60% {
+ -webkit-transform: translate(10px, 0);
+ transform: translate(10px, 0);
+}
+ 80% {
+ -webkit-transform: translate(-5px, 0);
+ transform: translate(-5px, 0);
+}
+}
+
+@-webkit-keyframes
+correct {  20% {
+ background: limegreen;
+}
+ 40% {
+ -webkit-transform: translate(0, -15px);
+ transform: translate(0, -15px);
+}
+ 60% {
+ -webkit-transform: translate(0, 10px);
+ transform: translate(0, 10px);
+}
+ 80% {
+ -webkit-transform: translate(0, -5px);
+ transform: translate(0, -5px);
+}
+}
+
+@keyframes
+correct {  20% {
+ background: limegreen;
+}
+ 40% {
+ -webkit-transform: translate(0, -15px);
+ transform: translate(0, -15px);
+}
+ 60% {
+ -webkit-transform: translate(0, 10px);
+ transform: translate(0, 10px);
+}
+ 80% {
+ -webkit-transform: translate(0, -5px);
+ transform: translate(0, -5px);
+}
+}
+
+@-webkit-keyframes
+bg-red {  50% {
+ background: crimson;
+}
+}
+
+@keyframes
+bg-red {  50% {
+ background: crimson;
+}
+}
+
+@-webkit-keyframes
+bg-green {  50% {
+ background: limegreen;
+}
+}
+
+@keyframes
+bg-green {  50% {
+ background: limegreen;
+}
+}

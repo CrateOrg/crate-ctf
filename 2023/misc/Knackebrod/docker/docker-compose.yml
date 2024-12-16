@@ -1,0 +1,8 @@
+version: '2'
+services:
+  passwordcracking:
+    build:
+      context: .
+    ports:
+      - "13431:31337"
+    restart: always

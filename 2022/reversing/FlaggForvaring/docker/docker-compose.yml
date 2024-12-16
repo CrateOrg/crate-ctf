@@ -1,0 +1,8 @@
+version: '3'
+services:
+  flaggforvaring:
+    build:
+      context: .
+    ports:
+      - "12548:31337"
+    restart: always

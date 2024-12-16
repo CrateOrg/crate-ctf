@@ -1,0 +1,25 @@
+version: "3" # ctfdcli version used
+
+name: Red teaming?
+author: Caspian
+category: Forensik
+description: |
+  Jobbet som privatdetektiv är slitigt, man måste alltid vara på sina tår.
+  Sittandes i en buske med en kikare spanar du in i mannens vardagsrum.
+  Bakåtlutad i fåtöljen med fötterna på bordet och TV:n på högsta volym...
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - "cratectf{infra-redteamingftw}"
+files:
+  - data.bin
+
+tags:
+  - uppvärmning
+
+state: visible

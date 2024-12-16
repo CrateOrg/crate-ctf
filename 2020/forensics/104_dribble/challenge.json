@@ -1,0 +1,9 @@
+{
+	"name": "dataleak",
+	"description": "Ondingarna har kommit på ett sätt att läcka data via en sidokanal genom att skicka instruktioner med hjälp av ett SCADA-protokoll till en transformatorstation. Kan du få ut flaggan?",
+	"categories": ["Forensic"],
+	"default_flag": "2020ctf{thegoldbugin104}",
+	"variable_flag": false,
+	"static": true,
+	"authors": ["tomgus"]
+}

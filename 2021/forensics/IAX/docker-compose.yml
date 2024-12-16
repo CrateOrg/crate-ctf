@@ -1,0 +1,33 @@
+version: "2"
+services:
+  iax_support:
+    image: jox
+    stdin_open: true
+    networks:
+      sip_static:
+        ipv4_address: "148.94.181.10"
+
+  confused_user:
+    image: jox
+    stdin_open: true
+    networks:
+      sip_static:
+        ipv4_address: "148.94.52.90"
+
+  downloader:
+    image: jox
+    stdin_open: true
+    networks:
+      sip_static:
+        ipv4_address: "148.94.102.45"
+
+networks:
+  sip_static:
+    driver_opts:
+      com.docker.network.bridge.name: br-sipcall
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 148.94.182.0/16
+          gateway: 148.94.0.1
+

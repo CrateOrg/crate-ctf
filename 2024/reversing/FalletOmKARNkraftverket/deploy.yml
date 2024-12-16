@@ -1,0 +1,91 @@
+---
+
+- name: Deploy Fallet om KÄRNkraftverket
+  hosts: challenges_kernel
+  become: true
+  tasks:
+    - name: Install kernel headers
+      ansible.builtin.apt:
+        pkg:
+          - "linux-headers-{{ ansible_kernel }}"
+          - make
+          - gcc
+          - build-essential
+          - checkinstall
+          - flex
+          - bison
+          - xinetd
+        state: present
+        update_cache: true
+
+    # This seems to be required for some reason, else you will get
+    # "insmod: ERROR: could not insert module backdoor.ko: Invalid module format"
+    - name: Force reinstall of kernel headers
+      ansible.builtin.command: "apt install -y --reinstall linux-headers-{{ ansible_kernel }}"
+
+    - name: Remove old module
+      community.general.modprobe:
+        name: backdoor
+        state: absent
+      ignore_errors: true # Fails when module is not loaded
+
+    - name: Copy challenge
+      ansible.builtin.copy:
+        src: "./chall/"
+        dest: /challenge/
+        mode: "0750"
+
+    - name: Cleanup before build
+      community.general.make:
+        chdir: /challenge/
+        target: clean
+
+    - name: Set flag
+      ansible.builtin.lineinfile:
+        path: /challenge/main.c
+        regexp: "^#define FLAG.*"
+        line: "#define FLAG \"{{ lookup('ansible.builtin.file', 'chall/flag.txt') }}\""
+
+    - name: Build kernel module
+      community.general.make:
+        chdir: /challenge/
+
+    - name: Install kernel module
+      community.general.make:
+        chdir: /challenge/
+        target: install
+
+    - name: Run depmod
+      ansible.builtin.command: depmod
+
+    - name: Load kernel module module
+      community.general.modprobe:
+        name: backdoor
+        state: present
+        persistent: present
+
+    - name: Add ctf user
+      ansible.builtin.user:
+        name: ctf
+
+    - name: Copy talker
+      ansible.builtin.copy:
+        src: "./chall/talker/"
+        dest: /home/ctf/talker/
+        mode: "0755"
+
+    - name: Load config
+      ansible.builtin.copy:
+        remote_src: True
+        src: /challenge/ctf.xinetd 
+        dest: /etc/xinetd.d/ctf
+
+    - name: Restart xinetd
+      ansible.builtin.service:
+        name: xinetd
+        state: restarted
+
+    - name: Remove challenge source
+      ansible.builtin.file:
+        path: /challenge
+        state: absent

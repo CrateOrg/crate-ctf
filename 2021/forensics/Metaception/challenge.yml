@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Metaception
+author: jerry
+category: Forensik
+description: Year of the Linux desktop?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{i_use_arch_btw}
+
+files:
+  - linux.wav
+
+state: visible
+
+

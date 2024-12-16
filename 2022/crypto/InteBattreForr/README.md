@@ -1,0 +1,3 @@
+# Det var inte alltid bättre förr
+
+`message.bin` innehåller flaggan som har krypterats med den publika RSA-nyckeln (2048 bit) i `rsa.pub`. Den tillhörande privata nyckeln (i `rsa.key`, ej synlig för deltagarna) kommer från en gammal installation av Debian som är sårbar för [CVE-2008-0166](https://www.debian.org/security/2008/dsa-1571) och därmed genererar förutsägbara nycklar när OpenSSL används. [En fil med alla möjliga nycklar](https://github.com/offensive-security/exploitdb-bin-sploits/raw/master/bin-sploits/5622.tar.bz2) som den sårbara versionen av OpenSSL kan generera går att hitta och deras motsvarande publika nycklar kan jämföras med den som ges i uppgiften. När rätt privat nyckel har hittats så kan den användas för att dekryptera meddelandet.

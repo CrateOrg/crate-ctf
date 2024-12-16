@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Mikrokontrollerad
+author: Johan
+category: Reversering
+description: |
+  Programmet vi tänkte använda för att skriva ut flaggan verkar ha blivit utsatt för någon form av bitflip och fungerar inte längre. Kan du laga det?
+  Klockfrekvensen för processorn som ska köra programmet är 8 MHz.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{just_an_AVRage_program_nothing_to_see_here}
+
+files:
+  - challenge
+
+state: visible

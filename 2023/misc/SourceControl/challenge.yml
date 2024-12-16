@@ -1,0 +1,20 @@
+version: "3" # ctfdcli version used
+
+name: Source Control
+author: Lars
+category: Övriga
+description: |
+  Kan du kontrollera din härkomst?
+
+connection_info: nc challs.crate.nu 24924
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{myportnoyourportokourport}
+
+state: visible

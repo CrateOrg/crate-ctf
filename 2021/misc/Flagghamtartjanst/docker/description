@@ -1,0 +1,4 @@
+service FlagGetter {
+   string get_key(),
+   string get_flag(1:string key),
+}

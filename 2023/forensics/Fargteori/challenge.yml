@@ -1,0 +1,37 @@
+version: "2" # ctfdcli version used
+
+name: Färgteori
+author: Denise
+category: Forensik
+description: |
+  Till: deltagare@foi.se
+  Från: peter@foi.se
+  Hinner inte till presentation!
+  
+  Tja!
+  
+  Jag skulle hålla en presentation för chefen på måndag men
+  jag har fått förhinder. Eftersom att du behöver smöra lite
+  för chefen och för att du är skyldig mig en så får du köra
+  presenationen istället för mig. Jag har en presentation
+  som nästan är klar, så kika på den och lös något.
+  
+  Ses på den tunna isen,
+  Peter!
+  
+  Bifogat: dig-rep-farg.pptx
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{färgglad}
+
+files:
+  - dig-rep-farg.pptx
+
+state: visible

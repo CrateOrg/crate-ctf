@@ -1,0 +1,9 @@
+{
+	"name": "Problemsolver",
+	"description": "En tjänst på port 53111 har några frågor, kan du svaren?",
+	"categories": ["General"],
+	"default_flag": "Nature never uses prime numbers. But mathematicians do.",
+	"variable_flag": true,
+	"static": false,
+	"authors": ["larhel"]
+}

@@ -1,0 +1,21 @@
+version: "3" # ctfdcli version used
+
+name: Hönan och Ägget
+author: Caspian
+category: Övriga
+description: |
+  Har du ofta problemet att din processorkraft är för svag? Och att program du kompilerar tar för lång tid att kompilera?
+    Testa då vår alldeles egna kompileringstjänst! Flaggan återfinnes i `/flag.txt`.
+
+connection_info: http://challs.crate.nu:50003
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{HenMakesEggEggMakesHenHenMakesEgg}
+
+state: visible

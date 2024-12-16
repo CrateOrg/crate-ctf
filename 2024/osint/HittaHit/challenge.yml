@@ -1,0 +1,20 @@
+version: "1" # ctfdcli version used
+
+name: HittaHit 1
+author: Mikael
+category: OSINT
+description: |
+  Var är bilden tagen? Använd decimalgrader.
+
+connection_info: http://challs.crate.nu:41241
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{En_av_orterna_är_större}
+
+state: visible

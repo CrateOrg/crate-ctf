@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: WhoShotTheSheriff
+author: martin
+category: Forensik
+description: |
+  Brottslingen sågs senast i 42:a sektorn. På brottsplatsen hittades lite digitalt DNA i form av WhoShotTheSheriff.txt. Vilket mugshot föreställer brottslingen?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{3806690.jpg}
+  
+files:
+  - WhoShotTheSheriff.txt
+  - mugshots.zip
+  
+state: visible

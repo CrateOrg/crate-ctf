@@ -1,0 +1,7 @@
+services:
+  uppvarmning:
+    build: .
+    ports:
+      - "50011:50011"
+    restart: always
+    init: true

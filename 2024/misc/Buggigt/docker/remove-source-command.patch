@@ -1,0 +1,33 @@
+From 20b0ba9d3d62db0426ef4bee4d791b4185a2b0ab Mon Sep 17 00:00:00 2001
+From: Johan Hedlin <johan.hedlin@foi.se>
+Date: Thu, 22 Aug 2024 16:01:59 +0200
+Subject: [PATCH] Remove source command
+
+---
+ gdb/cli/cli-cmds.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/gdb/cli/cli-cmds.c b/gdb/cli/cli-cmds.c
+index 5d49e39..5fa8acc 100644
+--- a/gdb/cli/cli-cmds.c
++++ b/gdb/cli/cli-cmds.c
+@@ -2965,7 +2965,7 @@ on CLI is suppressed."),
+ 			   &showlist);
+ 
+   const char *source_help_text = xstrprintf (_("\
+-Read commands from a file named FILE.\n\
++Sorry, you are not allowed to run this command...\n\nRead commands from a file named FILE.\n\
+ \n\
+ Usage: source [-s] [-v] FILE\n\
+ -s: search for the script in the source search path,\n\
+@@ -2974,7 +2974,4 @@ Usage: source [-s] [-v] FILE\n\
+ \n\
+ Note that the file \"%s\" is read automatically in this way\n\
+ when GDB is started."), GDBINIT).release ();
+-  c = add_cmd ("source", class_support, source_command,
+-	       source_help_text, &cmdlist);
+-  set_cmd_completer (c, filename_completer);
+ }
+-- 
+2.46.0
+

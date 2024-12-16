@@ -1,0 +1,10 @@
+services:
+  search:
+    build: .
+    ports: [ 47896:47896 ]
+    environment:
+      - PORT=47896
+      - MONGO_URL=mongodb://mongodb:27017
+      - FLAG=cratectf{tänk_om_typscript_vore_sunt.och_det_menar_jag_på_det_mest_akademiska_sättet}
+  mongodb:
+    image: mongo

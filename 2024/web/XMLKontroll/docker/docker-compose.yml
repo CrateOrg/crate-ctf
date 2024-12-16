@@ -1,0 +1,8 @@
+version: '3'
+services:
+  xxe:
+    build:
+      context: .
+    ports:
+      - "16627:8000"
+    restart: always

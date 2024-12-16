@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unpackman</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="main-container">
+        <h1 id="title">Unpackman</h1>
+        <div id="image-container">
+            <img src="{{ url_for('static', filename='pacman.webp') }}" alt="Packman" id="packman-image"/>
+        </div>
+        <p id="subtitle">We have not yet developed a binary to unpack the munched files in memory. Stay tuned!</p>
+        <p id="notice">The unpacking service is currently a paid feature!</p>
+        <div id="links">
+            <p><a href="{{ url_for('index') }}" class="link-button">Pack a file</a></p>
+            <p><a href="{{ url_for('listing') }}" class="link-button">Your packed files</a></p>
+        </div>
+    </div>
+</body>
+</html>

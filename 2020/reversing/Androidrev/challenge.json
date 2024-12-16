@@ -1,0 +1,9 @@
+{
+	"name": "Androidrev",
+	"description": "Kan man bli belönad av att smälla bubblor? Har hört att de som till och med passerat elit-klassen kan det...",
+	"categories": ["Reversing"],
+	"default_flag": "2020ctf{high_salaries_for_phone_reversing_dude}",
+	"variable_flag": false,
+	"static": true,
+	"authors": ["larhel"]
+}

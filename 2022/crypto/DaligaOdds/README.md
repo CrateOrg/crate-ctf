@@ -1,0 +1,5 @@
+# Dåliga odds
+
+Uppgiften genererar slumpmässiga tal mellan 0 och 4294967295 och låter deltagaren gissa vilket tal som valdes. Om rätt gissning görs tre gånger i rad så skrivs flaggan ut (vilket är praktiskt taget omöjligt att lyckas med via brute force).
+
+Slumptalsgeneratorn kommer från Pythons inbyggda random-modul, vilken implementerar "Mersenne Twister"-algoritmen. "Modellnumret" som skrivs ut i uppgiften visar på den specifika versionen av denna, MT19937. Då algoritmen inte är gjord för kryptografiskt bruk så är det möjligt att avgöra dess interna tillstånd (vilket gör det möjligt att förutsäga alla kommande tal) genom att observera 624 stycken slumptal från den. Det finns [färdiga Pythonbibliotek](https://github.com/tna0y/Python-random-module-cracker) där man enkelt kan mata in alla observerade tal och sedan be om att få nästa tal som kommer att genereras. Genom att gissa fel 624 gånger, logga vilket tal som förväntades, använda biblioteket för att räkna ut generatorns tillstånd och skicka in de tre kommande talen till uppgiften så får man flaggan.

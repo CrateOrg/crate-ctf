@@ -1,0 +1,33 @@
+version: "0.1" # ctfdcli version used
+
+name: Bôs-arp
+author: larshson
+category: Övriga
+description: |
+  På en av bänkarna i Bösarps kyrka hittade vi en psalmbok.
+
+  I psalmboken fanns ett ihåligt utrymme, som att någon klippt ut hundratals sidor och gjort ett lönnfack.
+
+  I utrymmet hittade vi en USB-sticka.
+
+  På stickan låg det en fil.
+
+  Vad är det som händer?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{franz$the$circular$hero}
+
+tags:
+  - uppvärmning
+
+files:
+  - bosarp.pcap.xz
+
+state: visible

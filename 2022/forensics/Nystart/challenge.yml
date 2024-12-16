@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Nystart
+author: martin
+category: Forensik
+description: |
+  Det gäller att ha bilden klar för sig, för flaggan står mitt i blickfånget (dock utan sedvanlig cratectf{}-formatering). Börja om från början, börja om på nytt ...
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{Nu_blev_jag_ren_sa_hjorten!}
+  - Nu_blev_jag_ren_sa_hjorten!
+
+files:
+  - files.tgz
+
+state: visible

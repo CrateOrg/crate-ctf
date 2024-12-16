@@ -1,0 +1,24 @@
+version: "3" # ctfdcli version used
+
+name: Kokbok
+author: Denise
+category: Reversering
+description: |
+  NYHET! Digital kokbok perfekt för dig, nu med fler nya recept.
+
+connection_info:
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{alldeles_enastående_smaksatt}
+
+files:
+  - recept
+  - Dockerfile
+
+state: visible

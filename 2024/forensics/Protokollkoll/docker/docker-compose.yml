@@ -1,0 +1,12 @@
+services:
+  protkollkoll:
+    build:
+      context: .
+    ports:
+      - "56412:31338"
+    restart: always
+    init: true
+    ulimits: # This is required for some reason, server.py always returns an empty string if it is removed
+      nofile:
+        soft: 1024
+        hard: 1024

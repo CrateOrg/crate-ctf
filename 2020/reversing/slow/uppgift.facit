@@ -1,0 +1,13 @@
+3340200223
+
+
+Följande fyra primtal ligger precis före/efter, och borde också accepteras (om de har ett off-by-one fel)
+3340200179 3340200211
+3340200229 3340200289
+
+Lösningsförslag:
+	Öppnar man binären i Ghidra och analyserar den får man rätt bra källkod. Man kan nog tolka den och se att den räknar ut primtal 160000005
+	Förstår man inte att koden räknar ut primtal kan man sätta en breakpoint i GDB för att se sekvensen "3 5 7 11"... osv och förstå att det är en sekevns av primtal.
+
+	Sen kan man antingen skriva ett snabbare program som räknar ut det n:te primtalet, ladda ner en lista med primtal, eller slå upp på wolframalpha:
+	https://www.wolframalpha.com/input/?i=160000005th+prime

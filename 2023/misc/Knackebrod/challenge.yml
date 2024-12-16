@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Knäckebröd
+author: toblu
+category: Övriga
+description: |
+  Knäck 60% av lösenorden för att få en flagga!
+
+connection_info: nc challs.crate.nu 13431
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{snyggt_gissat_bra_jobbat}
+
+files:
+  - docker/hashes
+
+state: visible

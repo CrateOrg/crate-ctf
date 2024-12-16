@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Tokfrans
+author: larshson
+category: Webb
+description: |
+  Min vän satt på ett cafe och råkade se när en skum filur loggade in på en webbsida. 
+
+  Filuren loggade in med användaren zeke och lösenordet irule42. Det verkade inte finnas nåt spännande dock, man behöver nog logga in som någon annan...
+
+  http://challenges.ctf.crate.foi.se:18263
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{th0se_t0ken_s3cre7ts_ar3_pr3c1ou5}
+
+state: visible

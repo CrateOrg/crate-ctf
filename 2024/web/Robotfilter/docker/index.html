@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotfilter</title>
+</head>
+<body>
+    <p>Endast människor får se flaggor och vi är {{ .notSure }} på att du är en. Var god lös följande robotfilter för att ta dig vidare.</p>
+    <img {{ .imgAttr }}>
+    {{ if .errorMessage }}
+        <p style="color: red">{{ .errorMessage }}</p>
+    {{ end }}
+    <form method="post" action="/">
+        <input type="text" name="ans" autofocus>
+        <input type="hidden" name="session" value="{{ .sessionID }}">
+    </form>
+    <a href="/mirror.png">Se dig själv i spegeln</a>
+</body>
+</html>

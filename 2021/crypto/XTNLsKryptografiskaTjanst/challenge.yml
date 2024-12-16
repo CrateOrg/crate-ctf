@@ -1,0 +1,22 @@
+version: "0.1" # ctfdcli version used
+
+name: Xtnls Kryptografiska Tjänst
+author: toblu
+category: Kryptografi
+description: |
+  Jag kom på ett jättebra sätt att fiffla och trixa med meddelanden så att bara jag kan läsa dem!
+  Nu ger jag dig en alldeles unik möjlighet att pröva min kryptografiska tjänst!
+
+  `nc challenges.ctf.crate.foi.se 11111`
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{kan_man_ens_kalla_detta_kryptografi}
+
+state: visible

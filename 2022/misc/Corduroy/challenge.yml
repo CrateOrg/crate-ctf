@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Corduroy
+author: Johan
+category: Övriga
+description: |
+  Alla våra jackor har uppdaterats för att vara kompatibla med IEEE 802.3, men i samband med detta så har de börjat ge ifrån sig någon sorts ljudsignal när de torktumlas.
+
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{transmission_received}
+
+files:
+  - ljud.wav
+
+state: visible

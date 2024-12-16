@@ -1,0 +1,4 @@
+Presentationen består av ett antal slides om färger. Bakgrunden på första sliden har hexkoden #F1A99A.
+Därefter finns det ett färgblock per slide. Deltagaren ska skriva upp hexkoderna för alla färgerna och konvertera dessa från hex för att få fram flaggan.
+
+Informationen kommer från https://obsessive-coffee-disorder.com/digital-representation-of-color/

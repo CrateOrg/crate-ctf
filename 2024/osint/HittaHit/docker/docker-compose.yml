@@ -1,0 +1,9 @@
+version: '2'
+services:
+  hittahit:
+    build:
+      context: .
+    container_name: hittahit
+    ports:
+      - "41241:80"
+    restart: always

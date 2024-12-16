@@ -1,0 +1,32 @@
+version: "0.1" # ctfdcli version used
+
+name: Det var inte alltid bättre förr
+author: Johan
+category: Krypto
+description: |
+  En kollega brukar alltid envisas med att ta emot sina after work-inbjudningar i krypterad form via OpenSSL.
+
+  "Det har fungerat bra de senaste 15 åren" säger han.
+
+  Nog ska Debian vara stabilt, men det kanske är nyttigt att uppdatera sitt system lite då och då?
+
+  Våra uppmaningar om att söka efter "debian openssl vulnerability" och läsa på om alla brister faller på döva öron,
+  kan du dekryptera meddelandet och visa att "det var bättre förr" inte gäller kryptomjukvara?
+
+  Kommandot `openssl pkeyutl -inkey rsa.key -decrypt -in message.bin` borde fungera när du har lyckats hitta den privata nyckeln.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{shall_we_gather_for_whiskey_and_cigars_tonight?}
+
+files:
+  - message.bin
+  - rsa.pub
+
+state: visible

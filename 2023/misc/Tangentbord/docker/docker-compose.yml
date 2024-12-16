@@ -1,0 +1,8 @@
+version: '3'
+services:
+  tangentbord:
+    build:
+      context: .
+    ports:
+      - "18947:22"
+    restart: always

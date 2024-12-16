@@ -1,0 +1,29 @@
+version: "0.1" # ctfdcli version used
+
+name: Min 90
+author: larshson
+category: Övriga
+description: |
+  Olle "Epa-Kungen" Karlsson är tillbaka, denna gång med en multiprodukt. För två och en halv hundralapp får man en låda som utöver displaysystemen kopplas in som en "injektorbrygga" (wtf?) över styrboxen.
+  
+  Vi frågade honom på snapchat hur i hela världen den kan fungera, men han svarade bara "testa å kör ba vetja. haru swish?". Sagt och gjort, ta mig tusan. Billigaste trimkittet på marknaden.
+
+  En fiffig funktion är att den bakre displayen tänds under 10 sekunder i samband med att man aktiverar maxhastighet på 90km/h eller mer. Då kan man skicka ett tydligt budskap till de söndagsförare man bränner förbi på rakorna.
+
+
+connection_info: challs.crate.nu:502
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{vilken_forsakring_tacker_egentligen_detta}
+
+files:
+  - traktor_2.jpg
+
+state: visible

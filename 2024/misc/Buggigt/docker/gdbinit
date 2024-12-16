@@ -1,0 +1,5 @@
+set startup-with-shell off
+set disable-randomization off
+set disassembly-flavor intel
+file /home/ctf/main
+run

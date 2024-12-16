@@ -1,0 +1,20 @@
+version: "0.1" # ctfdcli version used
+
+name: Lagom är bäst
+author: Johan
+category: Webb
+description: |
+  Ladda upp en lagom stor fil.
+
+connection_info: http://challs.crate.nu:57861
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{inte_för_stort_inte_för_litet}
+
+state: visible

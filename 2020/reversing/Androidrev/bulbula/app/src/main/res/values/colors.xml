@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorMidnightBlue">#2c3e50</color>
+    <color name="colorWetAsphalt">#34495e</color>
+    <color name="colorGreenSea">#16a085</color>
+    <color name="colorForestBlues">#0a3d62</color>
+    <color name="colorBelizeHole">#2980b9</color>
+    <color name="colorGoodSamaritan">#3c6382</color>
+    <color name="colorDupian">#60a3bc</color>
+    <color name="colorSpray">#82ccdd</color>
+    <color name="colorPeterRiver">#3498db</color>
+    <color name="colorDevilBlue">#227093</color>
+    <color name="colorSummerSky">#34ace0</color>
+    <color name="colorBrightYarrow">#fdcb6e</color>
+    <color name="colorAmericanRiver">#636e72</color>
+</resources>

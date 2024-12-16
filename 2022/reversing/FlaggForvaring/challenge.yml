@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: Flaggförvaring
+author: Johan
+category: Reversering
+description: |
+  Licensen för det här flaggförvaringsprogrammet har gått ut, går det att få tag på flaggan ändå?
+
+connection_info: nc challs.crate.nu 12548
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{safe_and_secure}
+
+files:
+  - chall
+
+state: visible

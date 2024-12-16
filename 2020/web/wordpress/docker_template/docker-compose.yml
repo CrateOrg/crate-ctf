@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+  wordpress:
+    build:
+      context: wordpress
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: +@kfYvR!&Rk4Lvka
+      WORDPRESS_DB_NAME: wp_db
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: ./db
+    restart: always
+    environment:
+      MYSQL_DATABASE: wp_db
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: +@kfYvR!&Rk4Lvka
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'

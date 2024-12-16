@@ -1,0 +1,9 @@
+När binären körs kommer det fram en meny där användaren kan söka och
+hämta lite grejer från en databas. Om binären öppnas i ett disassember-program
+är det tydligt hur programmet connectar till en MongoDB. Användaren ska då
+själv koppla till databasen med inloggningsuppgifter som hittas i binären.
+Databasen 'Kokbok' innehåller två collections. Den ena heter 'Recept' och
+är den binären får information ifrån. Den andra är 'Hemliga recept'. I den
+sistnämnda kollektionen finns bara ett dokument som innehåller AES-nycklar.
+Den krypterade flaggan finns gömd i binären och går att få fram med ´strings´
+eller genom att se vad programmet jämför användar-input med.

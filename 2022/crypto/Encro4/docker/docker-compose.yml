@@ -1,0 +1,9 @@
+version: '3'
+services:
+  encro4:
+    hostname: encro4
+    build:
+      context: .
+    ports: 
+    - "31338:31338"
+    restart: always

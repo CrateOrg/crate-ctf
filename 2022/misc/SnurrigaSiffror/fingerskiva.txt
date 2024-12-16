@@ -1,0 +1,190 @@
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x558da76cff80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '01-noll.wav':
+  Metadata:
+    title           : noll
+    track           : 1
+  Duration: 00:00:01.30, bitrate: 706 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x558350bb3f80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '02-ett.wav':
+  Metadata:
+    title           : ett
+    track           : 2
+  Duration: 00:00:01.43, bitrate: 706 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x562f41568f80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '03-två.wav':
+  Metadata:
+    title           : tva
+    track           : 3
+  Duration: 00:00:01.55, bitrate: 706 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x557ca5dc0f80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '04-tre.wav':
+  Metadata:
+    title           : tre
+    track           : 4
+  Duration: 00:00:01.76, bitrate: 706 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x55a4b38aff80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '05-fyra.wav':
+  Metadata:
+    title           : fyra
+    track           : 5
+  Duration: 00:00:01.88, bitrate: 706 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x55a20815ff80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '06-fem.wav':
+  Metadata:
+    title           : fem
+    track           : 6
+  Duration: 00:00:02.07, bitrate: 706 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x55af34cd2f80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '07-sex.wav':
+  Metadata:
+    title           : sex
+    track           : 7
+  Duration: 00:00:02.39, bitrate: 706 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x55fc7d068f80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '08-sju.wav':
+  Metadata:
+    title           : sju
+    track           : 8
+  Duration: 00:00:02.68, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x55b5905f3f80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '09-åtta.wav':
+  Metadata:
+    title           : atta
+    track           : 9
+  Duration: 00:00:02.78, bitrate: 706 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+ffprobe version 4.4 Copyright (c) 2007-2021 the FFmpeg developers
+  built with gcc 10 (Debian 10.2.1-6)
+  configuration: --disable-decoder=amrnb --disable-decoder=libopenjpeg --disable-gnutls --disable-liblensfun --disable-libopencv --disable-podpages --disable-sndio --disable-stripping --enable-avfilter --enable-avresample --enable-gcrypt --enable-gpl --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libdavs2 --enable-libdc1394 --enable-libdrm --enable-libfdk-aac --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libjack --enable-libkvazaar --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libwebp --enable-libx265 --enable-libxavs2 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-nonfree --enable-openal --enable-opencl --enable-opengl --enable-openssl --enable-postproc --enable-pthreads --enable-shared --enable-version3 --enable-vulkan --incdir=/usr/include/x86_64-linux-gnu --libdir=/usr/lib/x86_64-linux-gnu --prefix=/usr --toolchain=hardened --enable-frei0r --enable-chromaprint --enable-libx264 --enable-vaapi --enable-libmfx --enable-libvmaf --enable-libsvtav1 --enable-libilbc --disable-altivec --shlibdir=/usr/lib/x86_64-linux-gnu
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+[wav @ 0x55bbd11c0f80] Discarding ID3 tags because more suitable tags were found.
+Input #0, wav, from '10-nio.wav':
+  Metadata:
+    title           : nio
+    track           : 10
+  Duration: 00:00:02.97, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s

@@ -1,0 +1,42 @@
+---
+
+- name: Deploy Intern2
+  hosts: challenges_intern2
+  tasks:
+    - name: Make sure that remote challenge directory exists
+      ansible.builtin.file:
+        path: /opt/chall
+        state: directory
+        owner: "{{ ansible_ssh_user }}"
+        group: "{{ ansible_ssh_user }}"
+        mode: "0755"
+
+    - name: Copy docker directory to server
+      ansible.builtin.copy:
+        src: ./docker/
+        dest: /opt/chall/
+        mode: "0755"
+
+    - name: Install packages
+      ansible.builtin.apt:
+        pkg:
+          - docker.io
+        state: present
+        update_cache: true
+
+    - name: Ensure Docker CLI plugins directory exists
+      ansible.builtin.file:
+        path: /usr/local/lib/docker/cli-plugins
+        state: directory
+        mode: '0755'
+
+    - name: Download Docker Compose V2 binary
+      ansible.builtin.get_url:
+        url: "https://github.com/docker/compose/releases/download/v2.30.3/docker-compose-linux-x86_64"
+        dest: /usr/local/lib/docker/cli-plugins/docker-compose
+        mode: '0755'
+
+    - name: Build and start docker containers
+      community.docker.docker_compose_v2:
+        project_src: /opt/chall/
+        build: always

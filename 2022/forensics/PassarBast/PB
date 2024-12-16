@@ -1,0 +1,4 @@
+f_sizes_file#std_a_lst#inc_a_list#dec_a_list#bl_wr_lst#b_w_lim#erase#creat#iters#fs_size
+[725, 741, 1]#[1, 0, 0, 0]#[1, 0, 0, 0]#[0, 0, 0, 1]#[0, 1]#65536#[0.75, 0.95]#[0.05, 0.35]#1#2048
+crea 0 0 726 -d
+halt EoFIFO

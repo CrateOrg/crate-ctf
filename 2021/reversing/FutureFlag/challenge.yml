@@ -1,0 +1,23 @@
+version: "0.1" # ctfdcli version used
+
+name: FutureFlag
+author: jerry
+category: Reversering
+description: Framtiden är här
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{avlusning_med_ett_simpelt_knep}
+
+files:
+  - challenge
+
+state: visible
+
+

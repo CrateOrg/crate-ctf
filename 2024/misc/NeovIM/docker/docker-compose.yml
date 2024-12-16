@@ -1,0 +1,7 @@
+services:
+  neovim:
+    build: .
+    ports:
+      - "50002:50002"
+    restart: always
+    init: true

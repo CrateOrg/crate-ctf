@@ -1,0 +1,20 @@
+version: "0.1" # ctfdcli version used
+
+name: AdGuard 2000
+author: larshson
+category: Webb
+description: |
+  Någon har använt en annonsbevakares databas för att lagra hemligheter i.
+
+connection_info: http://challs.crate.nu:26723
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{use_sql_statements_for_injections_not_bleach}
+
+state: visible

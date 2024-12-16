@@ -1,0 +1,23 @@
+version: "3" # ctfdcli version used
+
+name: Fallet om KÄRNkraftverket
+author: Caspian
+category: Reversering
+description: |
+  Hackargruppen FloatingBl0wfish har varit igång och busat igen. De lämnade en exfiltreringskanal på en av offrets filservrar, kärnkraftverket har lyckats fiska ut två suspekta filer.
+
+connection_info: nc fok.challs.crate.nu 50014
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{V1ktig_f0retags_data.zip}
+files:
+  - backdoor.ko
+  - talker
+
+state: visible

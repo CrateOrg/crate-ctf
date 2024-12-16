@@ -1,0 +1,7 @@
+services:
+  krencyclopedia:
+    build: .
+    ports:
+      - "50010:5000"
+    restart: always
+    init: true

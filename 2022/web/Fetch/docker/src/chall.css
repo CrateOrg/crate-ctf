@@ -1,0 +1,14 @@
+#pagecontent {
+  padding: 1em
+}
+
+#output {
+  white-space: pre-wrap;
+}
+
+input {
+  margin: auto;
+  border: 2px solid rgba(0, 0, 0, 255);
+  position: relative;
+}
+

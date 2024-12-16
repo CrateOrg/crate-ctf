@@ -1,0 +1,36 @@
+version: "0.1" # ctfdcli version used
+
+name: Poletten
+author: daneid
+category: Krypto
+description: |
+  <pre>
+  32 9C 9B 13 AB A1 29 85 59 E5 59 A6 3A 9E DD 8B 
+  8D E2 8E A3 A3 31 75 77 43 58 15 24 6A E7 EB 0F 
+  D4 E8 87 1F E9 14 F8 49 FF 2C 81 1C 07 0D BB 29 
+  08 5C 4D 42 09 47 BB 8A 06 A3 11 28 6A 32 68 B6 
+  AD 
+  
+  05 86 9F 47 BA B0 28 97 4A 8A 64 85 3A 13 C1 8B 
+  96 E1 85 35 A5 74 37 42 59 49 19 40 6E E4 E3 4A 
+  C4 EC 9B 1D AC 5B E2 00 FE 21 CF 4C 12 9E BF 68 
+  13 D4 19 5F 1A 
+  </pre>
+
+  The truth is in there. The Difference will prevail in dark times.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{OTP är oknäckbart, men bara om man gör rätt}
+
+tags:
+
+files:
+
+state: visible

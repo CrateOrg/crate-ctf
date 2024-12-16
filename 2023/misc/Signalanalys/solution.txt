@@ -1,0 +1,4 @@
+1. Gör om ljuden till siffror på något sätt. Vissa verktyg fungerar bara halvbra, dtmf2num till exempel. Manuellt arbete kan löna sig trots allt. Det ska vara 84 siffror.
+2. Gruppera siffrorna i tresiffriga tal, motsvarande int av Unicode (ASCII i det här fallet)
+3. Omvandla de tresiffriga talen till motsvarande tecken och spara som sträng
+4. Base64-avkoda strängen, det är flaggan.

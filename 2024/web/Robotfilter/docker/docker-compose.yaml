@@ -1,0 +1,8 @@
+services:
+  robotfilter:
+    build: .
+    ports: [ 443:443 ]
+    environment:
+      - BASE_DOMAIN=robotfilter.challs.crate.nu
+      - CERT_FILE=.lego/certificates/robotfilter.challs.crate.nu.crt
+      - KEY_FILE=.lego/certificates/robotfilter.challs.crate.nu.key

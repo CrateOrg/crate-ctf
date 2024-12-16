@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNICORN SHREDDER 2.0</title>
+    <style>
+        html {
+						height: 100%;
+        }
+				body {
+						height: 100%;
+						margin: 0;
+						font-family: Arial, sans-serif;
+				    background: linear-gradient(to bottom right, #FFD1DC, #D1FFDA); /* Light pink to light green gradient */
+            background-attachment: fixed;
+				}
+				#logo {
+						display: block;
+						width: 280px;   /* Original width of the logo */
+						height: 280px;  /* Original height of the logo */
+				}
+				.container {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						height: 100%;
+				}
+
+				#panes {
+						display: flex;
+						align-items: center;
+				}
+				#inputPane, #outputPane {
+						background-color: #f0f0f0;
+						width: 600px;  /* Decreased initial width */
+						height: 600px; /* Initial height */
+						border: 1px solid #ddd;
+						padding: 10px;
+						position: relative;
+						text-align: center;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetic */
+						transition: all 0.3s ease;  /* Transition effect for smoother resizing */
+				}
+				#inputPane.expanded, #outputPane.expanded {
+						width: 100%;  /* Width after expansion */
+						height: 900px; /* Height after expansion */
+				}
+        #settingsPane {
+          padding: 20px
+        },
+        #shredButton {
+            margin: 0 2%;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+						display: none;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        label {
+            cursor: pointer;
+        }
+        .drag-over {
+          background-color: #36f8fa;
+          border-color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+		<div class="container"> 
+				<img src="logo.png" alt="Logo" id="logo">
+				<img src="text.png" alt="UNICORN SHREDDER 2.0" style="display:block;margin-bottom:20px">
+				<div id="panes">
+						<div id="inputPane">
+							<span id="uploadLabel">Drag and drop image to shred...</span>
+							<input type="file" id="imageInput" accept="image/*">
+							<img id="inputImage" src="" alt="Input Image" style="display:none;">
+						</div>
+            <div id="settingsPane"><center>
+            Select algorithm:<br>
+            <select id="algo" name="algorithm">
+              <option value="scissor-friendly">Scissor friendly</option>
+              <option value="ultra-secure">Ultra secure</option>
+            </select><br>
+						<button id="shredButton">SHRED!</button>
+              </center>
+            </div>
+						<div id="outputPane">
+								<img id="outputImage" src="" alt="Shredded Image">
+						</div>
+				</div>
+        <p>Shredding algorithm is MILITARY APPROVED (and better than EVER)<br>Inspect the shred bucket <a href="shreds/">here</a></p>
+		</div>
+    <script src="script.js"></script>
+</body>
+</html>
+

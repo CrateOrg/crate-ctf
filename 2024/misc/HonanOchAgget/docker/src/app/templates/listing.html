@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Compiled Files</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="container">
+        <h1>Your Compiled Files</h1>
+        <img src="{{ url_for('static', filename='compiler_image.webp') }}" alt="Compiler Image" id="compiler-image">
+        <div id="file-list">
+            {% for i in range(0, len) %} 
+                <p><a href="{{ url_for('download', filename=files[i])}}/">{{files[i]}}</a></p> 
+            {% endfor %} 
+        </div>
+        <p><a href="{{ url_for('index') }}">Compiler Service 3000</a></p>
+    </div>
+</body>
+</html>

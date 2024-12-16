@@ -1,0 +1,7 @@
+services:
+  honanochagget:
+    build: .
+    ports:
+      - "50003:5000"
+    restart: always
+    init: true

@@ -1,0 +1,21 @@
+version: "0.1" # ctfdcli version used
+
+name: Ett väldigt jamande
+author: toblu
+category: Reversering
+description: En liten katta vill hjälpa dig att kontrollera flaggan till den här uppgiften.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{JLTScuYHpEZsMgYAV}
+
+files:
+    - hmmmm.sb3
+
+state: visible

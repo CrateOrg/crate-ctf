@@ -1,0 +1,7 @@
+Lös flaggan genom att hitta rätt nummer och ge det till 'guess'-variabeln i arnoldc-programmet.
+
+För att veta om numret är rätt kan variabeln 'lie' nyttjas,när den är true (@NO PROBLEMO i ArnoldC)
+är siffran rätt och flaggan skrivs ut i terminalen som ascii-tal.
+Konvertera till läslig text görs med exempelvis CyberChefs 'From Decimal'.
+
+Rätt tal är 147

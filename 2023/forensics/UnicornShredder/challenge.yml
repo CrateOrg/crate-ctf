@@ -1,0 +1,20 @@
+version: "3" # ctfdcli version used
+
+name: Unicorn Shredder
+author: Lars
+category: Forensik
+description: |
+  Vi begärde en trial-version från företaget som påstod sig tillverkat en strimlare godkänd för användning på topphemliga bilder. Varför bara radera bilder när man kan strimla dem?
+
+connection_info: http://challs.crate.nu:41141
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{governmental_security_approval_was_only_a_pink_and_green_unicorn_dream}
+
+state: visible

@@ -1,0 +1,8 @@
+version: '2'
+services:
+  thrift:
+    build:
+      context: .
+    ports:
+      - "13313:31337"
+    restart: always

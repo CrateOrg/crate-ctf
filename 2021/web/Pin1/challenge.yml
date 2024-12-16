@@ -1,0 +1,21 @@
+version: "0.1" # ctfdcli version used
+
+name: Pin1
+author: larshson
+category: Webb
+description: |
+  Kan du hitta rätt PIN-kod?
+  
+  http://challenges.ctf.crate.foi.se:36961
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{easy_peasy_peaky_blinders}
+
+state: visible

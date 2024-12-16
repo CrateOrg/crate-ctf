@@ -1,0 +1,23 @@
+version: "3" # ctfdcli version used
+
+name: Diktafon
+author: Mathias
+category: Webb
+description: |
+  Jag hittade den här jättebra sida med en massa (typ 6) jättevälskriva (ganska dåliga) dikter (av ChatGPT)!
+
+connection_info: http://challs.crate.nu:12321
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{if_only_whoever_made_the_login_form_thought_for_two_more_seconds}
+
+files: # generated with `tar -czf source.tar.gz -C docker/src/ .`
+  - source.tar.gz
+
+state: visible

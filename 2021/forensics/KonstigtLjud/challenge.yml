@@ -1,0 +1,22 @@
+version: "0.1" # ctfdcli version used
+
+name: Konstigt ljud
+author: johahed
+category: Forensik
+description: |
+  Vi hittade en dator på kontoret som hade något lustigt ljud för sig, men vår IT-säkerhetsexpert bara muttrade något om pakethanterare eller "advanced persistent threats" och gick iväg på lunch. Kan du hjälpa till att analysera inspelningen och se om vi har en dataläcka?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{kanske_inte_var_så_farligt_ändå}
+
+files:
+  - chall.wav.xz
+
+state: visible

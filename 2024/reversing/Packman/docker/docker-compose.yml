@@ -1,0 +1,7 @@
+services:
+  packman:
+    build: .
+    ports:
+      - "50013:5000"
+    restart: always
+    init: true

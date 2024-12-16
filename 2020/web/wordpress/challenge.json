@@ -1,0 +1,9 @@
+{
+	"name": "wordpress",
+	"description": "allt möjligt",
+	"categories": ["Webb"],
+	"default_flag": "none",
+	"variable_flag": false,
+	"static": false,
+	"authors": ["larhel"]
+}

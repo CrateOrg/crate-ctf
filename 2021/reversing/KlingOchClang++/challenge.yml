@@ -1,0 +1,21 @@
+version: "0.1" # ctfdcli version used
+
+name: Kling och Clang++
+author: toblu
+category: Reversering
+description: Något halvkompilerat program som nästan skriver ut en flagga.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{var_det_en_IRriterande_uppgift?}
+
+files:
+    - main.ll
+
+state: visible

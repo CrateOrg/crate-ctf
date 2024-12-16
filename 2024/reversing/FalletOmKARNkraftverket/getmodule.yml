@@ -1,0 +1,47 @@
+---
+
+- name: Fetch the compiled .ko file
+  hosts: challenges_kernel
+  become: true
+  tasks:
+    - name: Install kernel headers
+      ansible.builtin.apt:
+        pkg:
+          - "linux-headers-{{ ansible_kernel }}"
+          - make
+          - gcc
+          - build-essential
+          - checkinstall
+          - flex
+          - bison
+        state: present
+        update_cache: true
+
+    - name: Force reinstall of kernel headers
+      ansible.builtin.command: "apt install -y --reinstall linux-headers-{{ ansible_kernel }}"
+
+    - name: Copy challenge
+      ansible.builtin.copy:
+        src: "./chall/"
+        dest: /comp/
+        mode: "0750"
+
+    - name: Cleanup before build
+      community.general.make:
+        chdir: /comp/
+        target: clean
+
+    - name: Build kernel module
+      community.general.make:
+        chdir: /comp/
+
+    - name: Copy the compiled kernel module
+      ansible.builtin.fetch:
+        src: "/comp/backdoor.ko"
+        dest: "./backdoor.ko"
+        flat: true
+    
+    - name: Remove compilation directory
+      ansible.builtin.file:
+        path: /comp
+        state: absent

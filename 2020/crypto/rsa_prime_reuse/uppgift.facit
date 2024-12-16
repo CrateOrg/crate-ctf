@@ -1,0 +1,7 @@
+För att lösa uppgiften bör man klara av ungefär följande steg:
+	Identifiera att det är RSA-kryptering
+	Inse att man kan ta gcd(n1, n2) för att hitta prime2, och därmed även prime1 och prime3
+	Skapa en privat RSA-nyckel utifrån informationen om primtalen
+	Avkryptera meddelandet
+
+Se losning.py för ett lösningsförslag

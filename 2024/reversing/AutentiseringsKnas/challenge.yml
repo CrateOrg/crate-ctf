@@ -1,0 +1,19 @@
+version: "3" # ctfdcli version used
+
+name: Autentiseringsknas
+author: Caspian
+category: Reversering
+description: |
+  Autentiseringar på våra servrar har börjat bete sig mystiskt. IT på vårat företag har tidigare varit fascinerade i färgen "Matrixgreen".
+  Nuförtiden måste man registrera sin dator hos IT innan man kan logga in...
+connection_info: ssh -p 50009 ctf@challs.crate.nu
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{NamnServerSomHashDatabas?}
+state: visible

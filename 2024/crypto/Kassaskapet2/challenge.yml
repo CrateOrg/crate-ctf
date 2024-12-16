@@ -1,0 +1,23 @@
+version: "3" # ctfdcli version used
+
+name: Kassaskåpet 2 - "Bättre tur än skicklighet"
+author: Caspian
+category: Kryptografi
+description: |
+  Efter att Bosses förra kassaskåp blev rånat så valde han att installera ett nytt lås där han hellre litade på sin tur som pokerspelare.
+
+  (OBS! Attackera ej tjänsten nedan, utan endast kontraktet som har getts ut.
+  Brute-forcing av kontrakt-adressrymd eller kontohanteringstjänst är ej tillåtet)
+connection_info: nc challs.crate.nu 50006
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{BlockHashTooPredictable!}
+files:
+  - Vault2.sol
+state: visible

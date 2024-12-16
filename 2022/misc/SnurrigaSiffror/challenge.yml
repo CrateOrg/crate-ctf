@@ -1,0 +1,35 @@
+version: "0.1" # ctfdcli version used
+
+name: SnurrigaSiffror
+author: martin
+category: Övriga
+description: |
+  Året är 1962, och Jürgens fru Claudia börjar misstänka att hon
+  blir bedragen. Hon har märkt att han på nätterna smyger upp och
+  sitter långa stunder vid bänken i hallen . Han verkar inte prata 
+  med någon, men deras ännu skinande `DBH 1001` har ändå egenskaper
+  som gör att hon vaknar när han sitter där.
+
+  En natt, efter lång våndan och ansamling av mod, lyckades hon
+  spela in en av hans sittningar. Tyvärr lyckades Claudia aldrig
+  förstå vad han gjorde, och konfronterade heller aldrig sin make.
+
+  60 år senare hittade parets barnbarn inspelningen och bad oss om 
+  hjälp.
+ 
+  Vad gjorde han egentligen på nätterna, den där Jürgen?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{Apelsinsylt}
+
+files:
+  - snurrigasiffror.mp3.xz
+
+state: visible

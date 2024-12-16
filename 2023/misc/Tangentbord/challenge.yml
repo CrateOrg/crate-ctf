@@ -1,0 +1,20 @@
+version: "0.1" # ctfdcli version used
+
+name: Tangentbord
+author: Johan
+category: Övriga
+description: |
+  Vi hittade ett tangentbord med texten "ultimate speed" skrivet på sidan och kopplade in det, men det verkar inte riktigt fungera som det ska...
+
+connection_info: "ssh -p 18947 ctf@challs.crate.nu # lösenord: Vhbmhkbk91o6wams"
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{dvorak_gets_better_with_practice}
+
+state: visible

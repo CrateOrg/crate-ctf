@@ -1,0 +1,127 @@
+package components
+
+import "challs.crate.nu/diktafon/sessions"
+
+templ Base() {
+	<!DOCTYPE html>
+	<html lang="sv">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>Stockmans Diktsamling</title>
+			<script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+			<script src="https://cdn.tailwindcss.com"></script>
+		</head>
+		<body class="flex flex-col h-screen">
+			@nav()
+			{ children... }
+		</body>
+	</html>
+}
+
+templ nav() {
+	<nav class="flex justify-center gap-4 bg-slate-100">
+		<a class="px-5 py-2 bg-slate-200" href="/">hem</a>
+		<a class="px-5 py-2 bg-slate-200" href="/register">registrera konto</a>
+		if sessions.LoggedInUser(ctx) != "" {
+			<a class="px-5 py-2 bg-slate-200" href="#" hx-get="/logout">logga ut</a>
+		} else {
+			<a class="px-5 py-2 bg-slate-200" href="/login">logga in</a>
+		}
+	</nav>
+}
+
+templ Index(username string, poems []string, flag string) {
+	@Base() {
+		<p class="text-center pt-5 text-lg">
+			if username != "" {
+				Välkommen { username }!
+			} else {
+				Välkommen! Logga in för att läsa dikter.
+			}
+		</p>
+		if flag != "" {
+			<p class="text-center pt-5 text-3xl font-bold">{ flag }</p>
+		}
+		if username != "" {
+			@PoemList(poems)
+		}
+	}
+}
+
+templ PoemList(poems []string) {
+	<main class="py-12 grow flex flex-col items-center" hx-target="#poem">
+		<section class="bg-gray-100 p-4 rounded-lg flex flex-wrap gap-5 max-w-screen-xl">
+			for _, poem := range poems {
+				<section class="bg-gray-200 p-4 rounded-md">
+					<button hx-get={ "/poem?name=" + poem }>
+						{ poem }
+					</button>
+				</section>
+			}
+		</section>
+		<section class="pt-6" id="poem">
+			@Poem("")
+		</section>
+	</main>
+}
+
+templ Poem(contents string) {
+	<pre>{ contents }</pre>
+}
+
+const rowStyles = "flex gap-2 items-center"
+const inputStyles = "p-2 border border-slate-300 rounded-md grow"
+
+templ Register() {
+	@Base() {
+		<main class="grow grid place-items-center">
+			@RegisterForm([]string{}, "")
+		</main>
+	}
+}
+
+templ RegisterForm(errors []string, username string) {
+	<form class="flex flex-col gap-3" hx-post="/register">
+		<div class={ rowStyles }>
+			<label>Användarnamn:</label>
+			<input class={ inputStyles } type="username" name="username" value={ username } />
+		</div>
+		<div class={ rowStyles }>
+			<label>Lösenord:</label>
+			<input class={ inputStyles } type="password" name="password" placeholder="************"/>
+		</div>
+		<button class="p-2 bg-slate-200">Registrera</button>
+		for _, err := range errors {
+			<div class="text-red-500">{ err }</div>
+		}
+	</form>
+}
+
+templ Login() {
+	@Base() {
+		<main class="grid place-items-center h-full">
+			@LoginForm([]string{}, "")
+		</main>
+	}
+}
+
+templ LoginForm(errors []string, username string) {
+	<form class="flex flex-col gap-3" hx-post="/login">
+		<div class={ rowStyles }>
+			<label>Lösenord:</label>
+			<input class={ inputStyles } type="text" name="password"/>
+		</div>
+		<div class={ rowStyles }>
+			<label>Användarnamn:</label>
+			<input class={ inputStyles } type="username" value={ username } name="username"/>
+		</div>
+		<button class="p-2 bg-slate-200">Logga in</button>
+		for _, err := range errors {
+			<div class="text-red-500">{ err }</div>
+		}
+		<a class="text-blue-800 underline text-sm text-right" href="/register">
+			Registrera ett konto istället
+		</a>
+	</form>
+}

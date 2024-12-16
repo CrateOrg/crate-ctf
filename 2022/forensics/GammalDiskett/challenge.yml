@@ -1,0 +1,25 @@
+version: "0.1" # ctfdcli version used
+
+name: GammalDiskett
+author: jerry
+category: Forensik
+description: |
+  Vi hittade en gammal diskett från 1996. Ryktet säger att det på den tiden legat en flagga på den.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{digital_tippex_torkar_langsamt}
+
+tags:
+  - uppvärmning
+
+files:
+  - floppy.img.xz
+
+state: visible

@@ -1,0 +1,1 @@
+Tredje gången gillt, kolla i /etc/X11/.Xauthority

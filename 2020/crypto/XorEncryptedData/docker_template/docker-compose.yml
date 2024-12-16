@@ -1,0 +1,11 @@
+version: '3'
+services:
+  randxor:
+    build:
+      context: .
+    working_dir: /home/ctf
+    container_name: randxor
+    ports:
+      - "57000:57000"
+    entrypoint: /etc/chall_init.sh
+    restart: always

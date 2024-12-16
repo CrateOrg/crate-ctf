@@ -1,0 +1,27 @@
+version: "3"
+services:
+  web:
+    build: src
+    ports:
+      - 12321:3000
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      FLAG: ${FLAG}
+    volumes:
+      - ./src/data:/data
+  redis:
+    image: redis:7.0-alpine3.18
+    expose:
+      - "6379"
+  bots:
+    image: ghcr.io/puppeteer/puppeteer:21.4.1
+    command: ["/home/pptruser/bots/start.sh"]
+    environment:
+      FLAG: ${FLAG}
+    volumes:
+      - ./bots:/home/pptruser/bots
+    cap_add: # kinda sus but needed by puppeteer
+      - SYS_ADMIN
+    init: true
+    depends_on:
+      - web

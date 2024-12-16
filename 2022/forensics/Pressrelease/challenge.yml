@@ -1,0 +1,39 @@
+version: "0.1" # ctfdcli version used
+
+name: Pressrelease
+author: larshson
+category: Forensik
+description: |
+  Bengan hade utvecklat starka känslor för Pia på marknadsavdelningen.
+  
+  Istället för att uppvakta Pia på traditionellt vis, och helt enkelt
+  berätta för henne vad han känner, ville han veta ALLT om Pia för
+  att på så vis öka sina chanser att lyckas vinna hennes hjärta.
+
+  Han stalkade hennes sociala medier, pushade ut spionprogram till hennes
+  tjänstetelefon (Bengan jobbade ju trots allt på IT-avdelningen), och
+  gick till och med så långt att han installerade en hemmabyggd keylogger 
+  mellan tangentbordet och dockningsstationen på hennes arbetsplats.
+
+  Den observante kollegan Nicolai larmade polisen, och Bengan åkte fast.
+  Samtidigt som Pia och Nicolai  (som efter incidenten hopplöst föll för 
+  varandra) var på smekmånad, släppte polisen en exempel-fil från Bengans
+  keylogger.
+
+  Hittar du något sätt att tyda den data som Bengans hemmabyggda hårdvara
+  genererat?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+files:
+  - sniff_82a9bf34.txt
+
+flags:
+  - cratectf{jiggers-maxillary-sewed-snappishnesses-aduncous}
+
+state: visible

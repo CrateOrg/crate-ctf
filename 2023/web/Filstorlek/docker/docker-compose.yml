@@ -1,0 +1,8 @@
+version: '3'
+services:
+  filstorlek:
+    build:
+      context: .
+    ports:
+      - "57861:8000"
+    restart: always

@@ -1,0 +1,5 @@
+1. Identifiera vilka Restart Markers varje fil har (FFDx, där x=[0-7]) med hjälp av t ex binwalk.
+
+for j in $( ls | grep -v tgz ); do for i in $( seq 0 7 ); do echo ${j}; binwalk -R "\xff\xd${i}" ${j}; done; done | grep -v DECIMAL | egrep -v '^\-' | egrep -v "^$"
+
+2. Använd informationen för att sätta ihop presumptiva bilder (cat filnamn1 filnamn2 ...) med de (få) möjliga kombinationer som finns.

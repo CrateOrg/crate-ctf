@@ -1,0 +1,103 @@
+h1, h2, h3, h4, h5, h6, p, blockquote, ul, li, ol, dl, dt, dd, form, body, html, article, aside, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    font-size: 100%;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+element.style {
+    position: relative;
+}
+section#listing-games {
+
+}
+.container nav.ui-views {
+    overflow: visible;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    min-height: 38px;
+}
+.with-filters .ui-views {
+    margin-left: 200px;
+}
+.with-filters:not(.filters-disabled) .ui-listing-body {
+    margin-left: 200px;
+}
+.container .items {
+    padding-top: 15px;
+}
+ul {
+    text-align: left;
+    list-style-type: none;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.container nav.ui-views {
+    overflow: visible;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    min-height: 38px;
+}
+.with-filters .ui-views {
+    margin-left: 200px;
+}
+.with-filters:not(.filters-disabled) .ui-listing-body {
+    margin-left: 200px;
+}
+.container .items {
+    padding-top: 15px;
+}
+ul {
+    text-align: left;
+    list-style-type: none;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.container .cols-4 .item.item-content:nth-child(-n+4) {
+    border-top: none;
+    padding-top: 0;
+}
+.container .cols-4 .item.item-content {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+.container .style-cover .item {
+    background: #fff;
+    text-align: center;
+}
+.container .item {
+    border-color: #eee;
+    position: relative;
+}
+ul li {
+    display: inline;
+}
+.container .style-cover .item .item-wrap {
+    padding: 10px 10px 30px;
+}
+.container .style-cover .item .cover {
+    height: 200px;
+    line-height: 200px;
+}
+

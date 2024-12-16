@@ -1,0 +1,7 @@
+services:
+  autentiserings-knas:
+    build: .
+    ports:
+      - "50009:22"
+    restart: always
+    init: true

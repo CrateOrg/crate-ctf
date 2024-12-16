@@ -1,0 +1,20 @@
+version: "3" # ctfdcli version used
+
+name: Packman
+author: Caspian
+category: Reversering
+description: |
+  Enligt våra benchmarks slår denna tjänst UPX, zip och tarball. Kontakta oss om du vill ha full tillgång till produkten!
+
+connection_info: http://challs.crate.nu:50013
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{AlltÄrÖppenSåsOmManKanReversera}
+
+state: visible

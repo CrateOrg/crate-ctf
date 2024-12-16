@@ -1,0 +1,9 @@
+version: '2'
+services:
+  adguard2000:
+    build:
+      context: .
+    container_name: adguard2000
+    ports:
+      - "26723:80"
+    restart: always

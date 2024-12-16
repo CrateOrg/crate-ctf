@@ -1,0 +1,18 @@
+entryPoints:
+  web:
+    address: ":80"
+    asDefault: true
+#   websecure:
+#     address: ":443"
+#     asDefault: true
+#
+# certificatesresolvers:
+#   default:
+#     acme:
+#       storage: /acme/acme.json
+#       httpchallenge:
+#         entrypoint: web
+
+providers:
+  file:
+    filename: /traefik-dynamic.yaml

@@ -1,0 +1,24 @@
+version: "2" # ctfdcli version used
+
+name: Intern
+author: Denise
+category: OSINT
+description: |
+  Tjenare Ossian Wallengren!
+  Välkommen till ditt internship här hos oss. Vi hoppas att du komer trivas! Det är egentligen inga konstigheter som anställd här, det mesta lär du dig längs med vägen. Det enda du behöver tänka på är hur du representerar dig själv på nätet med tanke på vad du har för position här.
+  Lycka till, mvh. HR
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{kanske_borde_rapportera_det_här_till_cyber_caching_inc}
+
+tags:
+
+files:
+
+state: visible

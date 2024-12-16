@@ -1,0 +1,50 @@
+Appen innehåller ett native-lib med funktionen getResult(int) som anropas vid game over med aktuellt score som argument.
+Funktionen returnerar en sträng som visas som en toast på skärmen.
+Antingen blir det "Game over! Sorry!" (där Sorry kommer från native) eller "Game over! <flag>" vid rätt score.
+
+Flaggan är ECB krypterad med blowfish och key "00031340". Libbet är både optimerat och strippat så det är nog lite bök att manuellt reversera koden.
+
+En lösning skulle helt enkelt vara att skriva en ny android-app som länkar in libbet och brute-forcerar anrop med integers och stannar vid någon annan output än "Sorry!". Den borde inte behöva snurra särskilt länge.
+
+Alternativt patcha libbet till att bara returnera strängen som den är utan att använda sig av JNI-kod som konverterar till UTF8 och därefter kompilera ett enkelt c++ program för arm som gör bruteforce-anrop, och köra i qemu. Strul med länkningar på detta vis dock, osäker på om det går att lösa så?
+
+En tredje variant: Ladda ner Android NDK och bygg ett litet bruteforce-program samt ett litet lib som forcerar bort Java-sträng-till-UTF-funktionen:
+
+=================================
+app.c:
+=================================
+#include <stdio.h>
+#include <string.h>
+
+char* Java_com_bulbula_game_StartActivity_getResult(void*, void*, int);
+
+int main() {
+  int i;
+  // Lets hope we get a hit before 100k
+  for (i = 0; i < 100000; ++i) {
+    char* result = Java_com_bulbula_game_StartActivity_getResult(NULL, NULL, i);
+    if (strcmp(result, "Sorry!")) {
+      printf("for score %d the result was: %s\n", i, result);
+    }
+  }
+}
+
+=================================
+lib.c:
+=================================
+// Name mangled c++ function
+char* _ZN7_JNIEnv12NewStringUTFEPKc(void* env, char* in) {
+  return in;
+}
+
+armv7a-linux-androideabi29-clang -shared lib.c -o liblib.so
+armv7a-linux-androideabi29-clang app.c -o app libscorechecker.so liblib.so
+
+Ladda ner android SDK och skapa+starta en emulator som kör arm-image med Android 7.
+
+adb push * /data/local/tmp
+adb shell
+cd /data/local/tmp
+LD_LIBRARY_PATH=. LD_PRELOAD=liblib.so ./app 
+
+svaret trillar ut efter någon halvminut.

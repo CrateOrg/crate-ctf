@@ -1,0 +1,4 @@
+# docker-compose.yaml in this directory includes the one in src/ and that one requires the FLAG
+# variable to be set. This seemed to be the best way to set FLAG when running in production without
+# putting it in the src directory.
+!.env

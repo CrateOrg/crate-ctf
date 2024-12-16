@@ -1,0 +1,23 @@
+version: "3" # ctfdcli version used
+
+name: Sök
+author: Mathias
+category: Webb
+description: |
+  Min kusins hund gjorde den här webbsidan.
+
+connection_info: http://challs.crate.nu:47896
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{tänk_om_typscript_vore_sunt.och_det_menar_jag_på_det_mest_akademiska_sättet}
+
+files:
+  - docker/main.tsx
+
+state: visible

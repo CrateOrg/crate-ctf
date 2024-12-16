@@ -1,0 +1,8 @@
+version: '2'
+services:
+  tokfrans:
+    build:
+      context: .
+    ports:
+      - "18263:80"
+    restart: always

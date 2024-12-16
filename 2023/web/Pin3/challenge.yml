@@ -1,0 +1,20 @@
+version: "0.1" # ctfdcli version used
+
+name: Pin3
+author: larshson
+category: Webb
+description: |
+  Kan du hitta rätt PIN-kod?
+
+connection_info: http://challs.crate.nu:36963
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{p1n_4pi_bru73_ach13vm3nt_unl0ck3d}
+
+state: visible

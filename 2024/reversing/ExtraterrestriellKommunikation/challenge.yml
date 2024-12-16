@@ -1,0 +1,21 @@
+version: "3" # ctfdcli version used
+name: Extraterrestriell Kommunikation
+author: Caspian
+category: Reversering
+description: |
+  Mänskligheten hade hittat liv i en annan galax, men denna civilisation hade inget språk utan bara bilder.
+  För att etablera kommunikation så skrev de en översättare.
+  Nu kliade forskarna sig i huvudet eftersom de behövde skriva en översättare från utomjordiska till det latinska alfabetet.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+flags:
+  - cratectf{2dimensione11mors3i1p4rallelltuniversum}
+files:
+  - flag.png
+  - alien.py
+state: visible

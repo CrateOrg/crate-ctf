@@ -1,0 +1,8 @@
+version: '2'
+services:
+  signatureforge:
+    build:
+      context: .
+    ports:
+      - "13411:31337"
+    restart: always

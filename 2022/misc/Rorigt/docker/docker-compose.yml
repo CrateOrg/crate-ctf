@@ -1,0 +1,7 @@
+version: '2'
+services:
+  bashserver:
+    build:
+      context: .
+    network_mode: host # Required to avoid additional TCP buffering that will break the challenge
+    restart: always

@@ -1,0 +1,22 @@
+version: "0.1" # ctfdcli version used
+
+name: Alldeles lagom stor
+author: toblu
+category: Kryptografi
+description: Har hört bra saker om ECC, men jag skulle säga att RSA ändå fungerar relativt prima.
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{Small_exponent_small_message_large_primes_not_very_good}
+
+files:
+    - generate_cipher.py
+    - output.txt
+
+state: visible

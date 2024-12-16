@@ -1,0 +1,24 @@
+version: "3" # ctfdcli version used
+
+name: Zebran, Koordinaterna och Piraterna
+author: Caspian
+category: Kryptografi
+description: |
+  Att innehava en Zebra är extremt värdefullt, pirat 1 påstod sig veta koordinaterna till var pirat 2 kunde hitta en.
+  Pirat 1 visste faktiskt inte var Zebran var. Därför lyckades han komma överens om att leveransen skulle komma efter att betalningen var gjord.
+  "Då måste du bevisa att du vet var Zebran är i förhand" utbrast pirat 2.
+  Pirat 1 var tvungen att bevisa att han visste var zebran var, utan att delge en plats.
+connection_info: nc challs.crate.nu 50008
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{pirat1_var_långt_från_pirat2_när_koordinaterna_levererades}
+files:
+  - main.c
+  - libc.so.6
+state: visible

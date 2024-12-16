@@ -1,0 +1,22 @@
+version: "3" # ctfdcli version used
+
+name: KaKlickare
+author: Caspian
+category: Webb
+description: |
+  Det här spelet som jag hittade slukar upp all min fritid.
+connection_info: http://challs.crate.nu:50012
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{JagHoppasInteDuKlickadeManuellt!}
+
+tags:
+  - uppvärmning
+
+state: visible

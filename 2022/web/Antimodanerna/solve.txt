@@ -1,0 +1,12 @@
+1. Hämta ut listan av hosts:
+  curl -s http://challs.crate.nu:15833 | sed -n 's/.*href="https:\/\/\([^"]*\).*/\1/p' > hosts.txt
+
+2. Använd t.ex. wfuzz eller scripta genomgång av hostar för att hitta den som skiljer sig
+  wfuzz --hh 612 -c -H "Host: FUZZ" -w hosts.txt http://challs.crate.nu:15833
+
+(2.5 kombinera?)
+  curl http://challs.crate.nu:15833 | sed -n 's/.*href="https:\/\/\([^"]*\).*/\1/p' | wfuzz --hh 612 -c -H "Host: FUZZ" -z stdin http://challs.crate.nu:15833
+
+3. Hämta flaggan!
+  curl -s -H "Host: flaggverket.se" http://challs.crate.nu:15833 | grep cratectf | sed 's/.*\(cratectf{.*}\).*/\1/'
+

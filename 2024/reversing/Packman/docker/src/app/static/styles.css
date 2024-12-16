@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main-container {
+    text-align: center;
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+}
+
+#title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 8px #000;
+    margin-bottom: 10px;
+}
+
+#subtitle {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    text-shadow: 1px 1px 4px #000;
+    margin-bottom: 20px;
+}
+
+#image-container {
+    margin-bottom: 20px;
+}
+
+#packman-image {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+#upload-form {
+    margin-bottom: 20px;
+}
+
+#file-input {
+    display: block;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+    background-color: #444;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+#upload-button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #1b1b1b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#upload-button:hover {
+    background-color: #ff9900;
+}
+
+#links {
+    margin-top: 20px;
+}
+
+.link-button {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 4px #000;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.link-button:hover {
+    color: #ff9900;
+    background-color: #444;
+}
+
+#file-list {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #292929;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.file-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    display: block;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.file-link:hover {
+    color: #fff;
+    background-color: #ff9900;
+    transform: scale(1.05);
+}
+
+#notice {
+    color: #ff6666;
+    font-weight: bold;
+    margin-top: 20px;
+}

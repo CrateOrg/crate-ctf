@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<UniversalRadioHackerProject description="" collapse_project_tabs="0" modulation_was_edited="1" broadcast_address_hex="ffff">
+  <modulators>
+    <modulator carrier_freq_hz="40000.0" carrier_amplitude="1.0" carrier_phase_deg="0.0" samples_per_symbol="500" name="Modulator" gauss_bt="0.5" gauss_filter_width="1.0" sample_rate="48000.0" modulation_type="ASK" index="0" parameters="0.0,100.0" bits_per_symbol="1"/>
+  </modulators>
+  <device_conf>
+    <adaptive_noise>False</adaptive_noise>
+    <apply_dc_correction>True</apply_dc_correction>
+    <automatic_center>False</automatic_center>
+    <bandwidth>0</bandwidth>
+    <bias_tee_enabled>False</bias_tee_enabled>
+    <bits_per_symbol>1</bits_per_symbol>
+    <center>0.02</center>
+    <center_spacing>0.1</center_spacing>
+    <decoding_name>Non Return To Zero (NRZ)</decoding_name>
+    <freq_correction>1</freq_correction>
+    <frequency>433920000.0</frequency>
+    <modulation_type>FSK</modulation_type>
+    <name>SoundCard</name>
+    <noise>0.36062445840513924</noise>
+    <num_sending_repeats>1</num_sending_repeats>
+    <rx_antenna_index>-1</rx_antenna_index>
+    <rx_baseband_gain>16</rx_baseband_gain>
+    <rx_gain>49</rx_gain>
+    <rx_if_gain>20</rx_if_gain>
+    <sample_rate>48000.0</sample_rate>
+    <samples_per_symbol>100</samples_per_symbol>
+    <tolerance>5</tolerance>
+    <tx_antenna_index>-1</tx_antenna_index>
+    <tx_baseband_gain>16</tx_baseband_gain>
+    <tx_gain>20</tx_gain>
+    <tx_if_gain>20</tx_if_gain>
+  </device_conf>
+  <simulator_rx_conf/>
+  <simulator_tx_conf/>
+  <signal name="signal" filename="signal.complex" samples_per_symbol="100" center="0" center_spacing="1" tolerance="5" noise_threshold="0.0" noise_minimum="0.0" noise_maximum="0.0" modulation_type="ASK" sample_rate="48000.0" pause_threshold="8" message_length_divisor="1" bits_per_symbol="1" costas_loop_bandwidth="0.1">
+    <messages/>
+  </signal>
+  <open_file name="signal.complex" position="0"/>
+  <group name="New Group" id="0">
+    <cf_protocol filename="signal.complex"/>
+  </group>
+  <protocol>
+    <decodings>
+      <decoding>'Non Return To Zero (NRZ)', </decoding>
+      <decoding>'Non Return To Zero + Invert', 'Invert', </decoding>
+      <decoding>'Manchester I', 'Edge Trigger', </decoding>
+      <decoding>'Manchester II', 'Edge Trigger', 'Invert', </decoding>
+      <decoding>'Differential Manchester', 'Edge Trigger', 'Differential Encoding', </decoding>
+    </decodings>
+    <participants/>
+    <messages>
+      <message message_type_id="8d1bdf1d-98d9-4502-8424-aeccd2d5d1a7" modulator_index="0" pause="0" timestamp="1665413625.661332" decoding_index="2"/>
+    </messages>
+    <message_types>
+      <message_type name="Default" id="8d1bdf1d-98d9-4502-8424-aeccd2d5d1a7" assigned_by_ruleset="0" assigned_by_logic_analyzer="0">
+        <ruleset mode="0"/>
+      </message_type>
+    </message_types>
+  </protocol>
+  <simulator_config>
+    <items>
+      <simulator_message destination_id="broadcast_participant" repeat="1">
+        <message message_type_id="4ea0c396-730f-4a3f-bd9e-b2e4c02c63a0" modulator_index="0" pause="0" timestamp="1664968673.2168984" bits="10001010000100001010100001101111101000010010000010000111" decoding_index="2">
+          <message_type name="Default" id="4ea0c396-730f-4a3f-bd9e-b2e4c02c63a0" assigned_by_ruleset="0" assigned_by_logic_analyzer="0">
+            <ruleset mode="0"/>
+          </message_type>
+        </message>
+      </simulator_message>
+    </items>
+  </simulator_config>
+</UniversalRadioHackerProject>

@@ -1,0 +1,21 @@
+version: "0.1" # ctfdcli version used
+
+name: Switched
+author: larshson
+category: Webb
+description: |
+  Freely Offered Information verkar erbjuda nedladdning av TV-spel...?
+
+  http://challenges.ctf.crate.foi.se:48252
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{sw1tchy_swoosh_got_sw1tch3d}
+
+state: visible

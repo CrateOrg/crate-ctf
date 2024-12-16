@@ -1,0 +1,8 @@
+version: '2'
+services:
+  pin3:
+    build:
+      context: .
+    ports:
+      - "36963:8080"
+    restart: always

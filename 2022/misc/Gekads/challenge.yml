@@ -1,0 +1,25 @@
+version: "0.1" # ctfdcli version used
+
+name: Gekåds
+author: larshson
+category: Övriga
+description: |
+  Vad är det för gekåder? Finns det en flagga däri?
+  
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+tags:
+  - uppvärmning
+
+files:
+  - data.xz
+
+flags:
+  - cratectf{3d_print_happyx9}
+
+state: visible

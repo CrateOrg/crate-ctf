@@ -1,0 +1,7 @@
+services:
+  zkp:
+    build: .
+    ports:
+      - "50008:50008"
+    restart: always
+    init: true

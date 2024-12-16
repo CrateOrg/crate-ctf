@@ -1,0 +1,22 @@
+version: "2" # ctfdcli version used
+
+name: Terminator
+author: Denise
+category: Reversering
+description: |
+  Efter att ha gjort en forensisk analys av ett chip som ramlade av en Cyberdyne Systems Model 101 hittades följande kod. Vad gör den? Och ännu viktigare, är den skadlig?
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{concider_that_a_flag_baby!}
+
+files:
+  - T-800.arnoldc
+
+state: visible

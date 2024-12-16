@@ -1,0 +1,163 @@
+---
+- name: Deploy Unicorn Shredder 2.0
+  hosts: shredder
+  become: true
+  vars:
+    cert_alternate_names:
+      - "{{ inventory_hostname }}"
+      - shredder.crate.foi.se
+  tasks:
+    - name: Install dependencies
+      ansible.builtin.apt:
+        pkg:
+          - python3
+          - python3-pip
+          - python3-pillow
+          - python3-cryptography
+          - php-fpm
+          - nginx
+        update_cache: true
+
+    - name: Copy challenge
+      ansible.builtin.copy:
+        src: ../docker/src/
+        dest: /var/www/
+        owner: www-data
+        group: www-data
+        mode: "0755"
+
+    - name: Create shreds directory
+      ansible.builtin.file:
+        path: /var/www/html/shreds
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: "0755"
+
+    - name: Create /etc/ssl/private
+      ansible.builtin.file:
+        path: /etc/ssl/private
+        state: directory
+        owner: root
+        group: www-data
+        mode: "0770"
+
+    - name: Generate SSL private key
+      community.crypto.openssl_privatekey:
+        path: /etc/ssl/private/key.pem
+        type: RSA
+        size: 4096
+        owner: root
+        group: www-data
+        mode: "0660"
+
+    - name: Generate DH parameters
+      community.crypto.openssl_dhparam:
+        path: /etc/ssl/private/dhparam.pem
+
+    - name: Configure nginx (http)
+      ansible.builtin.template:
+        src: http.conf.j2
+        dest: /etc/nginx/conf.d/http.conf
+        owner: root
+        group: root
+        mode: "0644"
+      notify: Restart nginx
+
+    - name: Remove default nginx page
+      ansible.builtin.file:
+        path: /var/www/html/index.nginx-debian.html
+        state: absent
+
+    - name: Start and enable nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+      notify: Restart nginx
+
+    - name: Flush handlers
+      ansible.builtin.meta: flush_handlers
+
+    - name: Generate CSR
+      community.crypto.openssl_csr:
+        path: /etc/ssl/private/cert.csr
+        common_name: "{{ inventory_hostname }}"
+        subject_alt_name: "{{ cert_alternate_names | map('regex_replace', '^', 'DNS:') | list }}"
+        privatekey_path: /etc/ssl/private/key.pem
+        owner: root
+        group: www-data
+        mode: "0660"
+
+    - name: Generate Let's Encrypt account key
+      community.crypto.openssl_privatekey:
+        path: /etc/ssl/private/letsencrypt_account_key.pem
+        type: RSA
+        size: 4096
+        owner: root
+        group: root
+        mode: "0660"
+
+    - name: Request certificate from Let's Encrypt
+      community.crypto.acme_certificate:
+        acme_version: 2
+        acme_directory: https://acme-v02.api.letsencrypt.org/directory
+        csr: /etc/ssl/private/cert.csr
+        account_key_src: /etc/ssl/private/letsencrypt_account_key.pem
+        fullchain_dest: /etc/ssl/private/fullchain.pem
+        account_email: cyber@crate.foi.se
+        challenge: http-01
+        terms_agreed: true
+        remaining_days: 14
+      register: acme_challenge
+
+    - name: Create challenge directory
+      ansible.builtin.file:
+        path: /var/www/html/.well-known/acme-challenge
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: "0755"
+
+    - name: Copy ACME challenge
+      when: acme_challenge is changed
+      ansible.builtin.copy:
+        dest: /var/www/html/{{ item.value['http-01']['resource'] }}
+        content: "{{ item.value['http-01']['resource_value'] }}"
+        owner: www-data
+        group: www-data
+        mode: "0755"
+      loop: "{{ acme_challenge['challenge_data'] | dict2items }}"
+
+    - name: Wait for nginx to start
+      ansible.builtin.wait_for:
+        port: 80
+
+    - name: Validate challenge from Let's Encrypt
+      community.crypto.acme_certificate:
+        acme_version: 2
+        acme_directory: https://acme-v02.api.letsencrypt.org/directory
+        csr: /etc/ssl/private/cert.csr
+        account_key_src: /etc/ssl/private/letsencrypt_account_key.pem
+        fullchain_dest: /etc/ssl/private/fullchain.pem
+        account_email: cyber@crate.foi.se
+        challenge: http-01
+        terms_agreed: true
+        remaining_days: 14
+        data: "{{ acme_challenge }}"
+      notify: Restart nginx
+
+    - name: Configure nginx (https)
+      ansible.builtin.template:
+        src: https.conf.j2
+        dest: /etc/nginx/conf.d/https.conf
+        owner: root
+        group: root
+        mode: "0644"
+      notify: Restart nginx
+
+  handlers:
+    - name: Restart nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted

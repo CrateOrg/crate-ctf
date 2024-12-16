@@ -1,0 +1,8 @@
+version: '3'
+services:
+  oraklet:
+    build:
+      context: .
+    ports:
+      - "16621:31338"
+    restart: always

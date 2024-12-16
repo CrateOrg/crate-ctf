@@ -1,0 +1,24 @@
+version: "0.1" # ctfdcli version used
+
+name: Max 30
+author: larshson
+category: Övriga
+description: |
+  Motorburen ungdom är mer avancerad än man kan tro! Här är Olle "Epa-Kungen" Karlssons konceptskiss över det displaysystem som han bygger och säljer för en spottstyver.
+
+  Till slut hittade vi honom på snapchat, köpte ett kit och satte upp på challenges.ctf.crate.foi.se:42142
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
+flags:
+  - cratectf{dotmatrix_modbus_atraktorhaxx}
+
+files:
+  - traktor.jpg
+
+state: visible

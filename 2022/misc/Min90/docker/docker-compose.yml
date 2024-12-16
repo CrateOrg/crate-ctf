@@ -1,0 +1,8 @@
+version: '2'
+services:
+  modbus_epakungen_2:
+    build:
+      context: .
+    ports: 
+    - "502:5020"
+    restart: always

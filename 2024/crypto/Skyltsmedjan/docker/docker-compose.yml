@@ -1,0 +1,14 @@
+services:
+  skyltsmedjan:
+    build:
+      context: .
+    ports:
+      - "2456:2456"
+    restart: always
+    environment:
+      FLAG: cratectf{du_skulle_väl_inte_förfalska_en_skylt_bara_för_poäng_i_en_ctf?}
+    init: true
+    ulimits:
+      nofile:
+        soft: 1024
+        hard: 1024

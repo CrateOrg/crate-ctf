@@ -1,0 +1,38 @@
+version: "2"
+services:
+  firefox:
+    image: selenium/standalone-firefox
+    shm_size: 2gb
+    networks:
+      romweb_static:
+        ipv4_address: "10.94.182.10"
+    # VNC?
+    #ports:
+    #  - "7900:7900"
+
+  selenium:
+    build: ./selenium-docker/.
+    depends_on:
+      - firefox
+    networks:
+      romweb_static:
+        ipv4_address: "10.94.182.20"
+  
+  romweb:
+    image: php:8-apache-buster
+    volumes:
+      - ./romweb:/var/www/html
+      - "./all_messages.txt:/all_messages.txt:rw"
+    networks:
+      romweb_static:
+        ipv4_address: "10.94.182.30"
+    ports:
+      - 48252:80
+
+networks:
+  romweb_static:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.94.182.0/24
+          gateway: 10.94.182.1

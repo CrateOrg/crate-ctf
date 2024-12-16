@@ -1,0 +1,21 @@
+version: "3" # ctfdcli version used
+name: Uppvärmning
+author: Caspian
+category: Reversering
+description: |
+  Det här med ny teknologi? Min grill har 32 knappar, och hur jag än trycker och skruvar verkar den inte sätta en jämn värme.
+  Kan du hjälpa mig läsa manualen?
+
+  (VARNING: Trots implikationen i namnet så är detta inte den lättaste uppgiften.)
+connection_info: nc challs.crate.nu 50011
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+flags:
+  - cratectf{GrillenGl0mdeUseAfterZ33}
+files:
+  - grill
+state: visible
